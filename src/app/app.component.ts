@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { StoreService } from './modules/core/services/store/store.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'planet-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'planet-O4B';
+  private readonly storeService: StoreService = inject(StoreService);
+
+  public get isLoggedIn$(): Observable<boolean> {
+    return this.storeService.isLoggedIn$;
+  }
 }
