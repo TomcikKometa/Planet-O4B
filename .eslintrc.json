@@ -1,14 +1,17 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
-  "rules": {
-    "@typescript-eslint/explicit-function-return-type": "off"
-  },
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": [
+        "*.ts"
+      ],
       "parserOptions": {
-        "project": ["./../tomasz/tsconfig.json"],
+        "project": [
+          "tsconfig.json"
+        ],
         "createDefaultProgram": true
       },
       "extends": [
@@ -27,7 +30,7 @@
         "max-len": [
           "error",
           {
-            "code": 140,
+            "code": 120,
             "tabWidth": 2,
             "ignoreComments": true,
             "ignoreUrls": true,
@@ -48,17 +51,20 @@
           "error",
           {
             "type": "element",
-            "prefix": "tomasz",
+            "prefix": "planet",
             "style": "kebab-case"
           }
         ]
       }
     },
     {
-      "files": ["*.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
       "rules": {}
     }
   ]
-
 }

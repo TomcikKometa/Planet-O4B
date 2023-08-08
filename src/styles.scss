@@ -1,1 +1,119 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+
+/* Colors: */
+--unnamed-color-27c722: #27C722;
+--unnamed-color-d3d3d3: #D3D3D3;
+--unnamed-color-1facdf: #1FACDF;
+--unnamed-color-0377ba: #0377BA;
+--unnamed-color-222222: #222222;
+--unnamed-color-555555: #555555;
+--unnamed-color-00ace2: #00ACE2;
+--unnamed-color-dde8f9: #DDE8F9;
+--unnamed-color-17266e: #17266E;
+--unnamed-color-274daa: #274DAA;
+--unnamed-color-2d4db2: #2D4DB2;
+--unnamed-color-24529e: #24529E;
+--unnamed-color-142b75: #142B75;
+--unnamed-color-7da6ed: #7DA6ED;
+--unnamed-color-ffffff: #FFFFFF;
+
+/* Font/text values */
+--main-font-family-open-sans: Open Sans;
+--additional-font-family-montserrat: Montserrat;
+--unnamed-font-style-normal: normal;
+--unnamed-font-weight-600: 600px;
+--unnamed-font-weight-normal: normal;
+--unnamed-font-size-10: 10px;
+--unnamed-font-size-14: 14px;
+--unnamed-font-size-15: 15px;
+--unnamed-font-size-18: 18px;
+--unnamed-font-size-30: 30px;
+--unnamed-character-spacing-0: 0px;
+--unnamed-line-spacing-14: 14px;
+--unnamed-line-spacing-19: 19px;
+--unnamed-line-spacing-24: 24px;
+--unnamed-line-spacing-42: 42px;
+}
+
+/* Character Styles */
+.unnamed-character-style-1 {
+font-family: var(--unnamed-font-family-open-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-10);
+line-height: var(--unnamed-line-spacing-14);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-555555);
+}
+.unnamed-character-style-2 {
+font-family: var(--unnamed-font-family-open-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-14);
+line-height: var(--unnamed-line-spacing-19);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-555555);
+}
+.unnamed-character-style-3 {
+font-family: var(--unnamed-font-family-open-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-600);
+font-size: var(--unnamed-font-size-14);
+line-height: var(--unnamed-line-spacing-19);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-222222);
+}
+.unnamed-character-style-4 {
+font-family: var(--unnamed-font-family-open-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-14);
+line-height: var(--unnamed-line-spacing-19);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-ffffff);
+}
+.unnamed-character-style-5 {
+font-family: var(--unnamed-font-family-open-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-14);
+line-height: var(--unnamed-line-spacing-19);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-222222);
+}
+.unnamed-character-style-6 {
+font-family: var(--unnamed-font-family-montserrat);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-18);
+line-height: var(--unnamed-line-spacing-24);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-555555);
+}
+.unnamed-character-style-7 {
+font-family: var(--unnamed-font-family-montserrat);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-600);
+font-size: var(--unnamed-font-size-15);
+line-height: var(--unnamed-line-spacing-19);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-00ace2);
+}
+.unnamed-character-style-8 {
+font-family: var(--unnamed-font-family-open-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-14);
+line-height: var(--unnamed-line-spacing-19);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-274daa);
+}
+.unnamed-character-style-9 {
+font-family: var(--unnamed-font-family-open-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-30);
+line-height: var(--unnamed-line-spacing-42);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-274daa);
+}
