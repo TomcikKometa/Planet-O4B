@@ -1,10 +1,12 @@
 import { HttpClient, HttpClientModule, HttpParams } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
+import { StoreService } from 'src/app/modules/core/services/store/store.service';
 
-import { StoreService } from '../../core/services/store/store.service';
-import { LoginRequest } from './models/login-request';
-import { LoginResponse } from './models/login-response';
+import { LoginRequest } from '../../model/login-request';
+import { LoginResponse } from '../../model/login-response';
+
+
 
 @Injectable({
   providedIn: 'root'

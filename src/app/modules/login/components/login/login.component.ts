@@ -2,8 +2,8 @@ import { Component, DoCheck, inject, OnInit, SimpleChange } from '@angular/core'
 import { FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { first } from 'rxjs';
-import { LoginService } from 'src/app/modules/api/login/login.service';
-import { LoginRequest } from 'src/app/modules/api/login/models/login-request';
+import { LoginRequest } from 'src/app/modules/api/model/login-request';
+import { LoginService } from 'src/app/modules/api/services/login/login.service';
 import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
 import { StoreService } from 'src/app/modules/core/services/store/store.service';
 
@@ -39,7 +39,6 @@ export class LoginComponent implements OnInit {
         .subscribe({
           next: () => this.navigationService.navigateToMainDashboard(),
           // error: (e) => this.toastrService.error('Nieprawidłowy login lub hasło')
-          error: (e) => console.log(e)
         });
     }
   }

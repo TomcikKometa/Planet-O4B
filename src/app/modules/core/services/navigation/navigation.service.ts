@@ -16,5 +16,7 @@ export class NavigationService {
     this.router.navigate([RoutePath.DASHBOARD]);
   }
 
- 
+  public navigateToMissionsDashboard(): void {
+    this.router.navigate([RoutePath.MANAGE_MISSIONS]);
+  }
 }
