@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
+
+.settingPage {
+  background-image: url('/assets/images/layered-waves-haikei.svg');
+  height: 1080px;
+  width: 1920px;
+}
+
+.headingMain {
+  margin-left: 200px;
+  margin-top: 60px;
+  align-items: center;
+}
+
+.headingModules {
+  margin-left: 210px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.font-main {
+  font-family: 'Open Sans';
+}
+
+::ng-deep .mat-card {
+  height: 220px;
+  width: 442px;
+  font-size: 17px;
+  font-family: 'Open Sans';
+  background-color: #7da6ed;
+  & ::ng-deep .mat-button {
+    background-color: transparent;
+    border-color: white;
+    border: 2px solid white;
+    outline: white !important;
+    font-family: 'Open Sans';
+    color: white;
+    border-radius: 7px;
+  }
+}
+
+::ng-deep .container-fluid {
+  margin-top: 2%;
+  margin-left: 205px;
+}
+
+::ng-deep .mat-card-header-title {
+  padding-top: 50px;
+  height: 120px;
+  font-family: 'Open Sans';
+  font-size: 45px;
+}
+
+::ng-deep .mat-card-actions {
+  padding-top: 10px;
+  font-family: 'Open Sans';
+}
+
+::ng-deep .mat-flat-button-focus {
+  background-color: wheat;
+  border-color: rgb(216, 25, 25);
+  border: 4px solid;
+  outline: white;
+}
+
+::ng-deep .mat-grid-list {
+  margin-left: 135px;
+  margin-right: 170px;
+  border-radius: 20px !important;
+  & ::ng-deep .cardTwo {
+    margin-left: -150px;
+    margin-right: -190px;
+    width: 700px !important;
+    border-radius: 20px !important;
+    background-color: white;
+  }
+  & ::ng-deep .cardThree {
+    width: 20px;
+    height: 220px;
+    background-color: red;
+    border-radius: 20px 0 0 20px !important;
+    margin-top: -16px !important;
+    margin-left: -20px;
+  }
+  & ::ng-deep .mat-card-header-text {
+    width: 360px !important;
+    font-family: 'Open Sans';
+    font-size: 26px;
+    padding-top: 25px;
+    font-weight: 600;
+  }
+  & ::ng-deep .actionsCardTwo {
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 150px;
+    & ::ng-deep .actionsCardTwoarrow {
+      width: 120px;
+    }
+  }
+}

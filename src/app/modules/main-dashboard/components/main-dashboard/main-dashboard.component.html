@@ -1,0 +1,64 @@
+<div class="settingPage">
+  <div class="d-flex justify-content-start">
+    <div class="col-12 headingMain row">
+      <div class="font-main" style="color: #274daa; font-weight: 600; font-size: 42px">Witaj!</div>
+      <div style="font-size: 42px; margin-bottom: 10px; color: #274daa; margin-left: 17px; margin-right: 4px">|</div>
+      <div class="col-8 mt-2">
+        <div class="font-main" style="font-size: 16px; color: #274daa">
+          Jesteś agentem do zadań specjalnych na zielonej planecie O4B.
+        </div>
+        <div class="font-main" style="font-size: 16px; margin-bottom: 10px; color: #274daa">
+          To jest twój system do zarządzania misjami specjalnymi realizowanymi przez Ciebie i twój zespół. Podążaj za
+          białym kursorem.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid d-flex justify-content-start">
+    <div class="row">
+      <div *ngFor="let card of UserDashboardCards">
+        <mat-card class="ml-2 mr-2">
+          <mat-card-header>
+            <mat-card-title class="mat-card-header-title" style="font-size: 26px"> {{ card.cardName }} </mat-card-title>
+          </mat-card-header>
+          <mat-card-actions>
+            <button class="ml-4 mt-3" mat-button>{{ card.buttonName }}</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div class="headingModules">
+    <div class="font-main" style="color: #274daa; font-weight: 600; font-size: 32px">Moduły</div>
+  </div>
+  <div class="col-11 ml-5">
+    <mat-grid-list cols="2" rowHeight="250px">
+      <mat-grid-tile
+        *ngFor="let card of modulesCards"
+        [colspan]="card.cols"
+        [rowspan]="card.rows"
+        [style.background]="card.color"
+      >
+        <mat-card class="ml-2 mr-5 cardTwo">
+          <div class="row">
+            <div class="col-12">
+              <div class="cardThree row">
+                <mat-card-header class="col-md-6">
+                  <mat-card-title class="mat-card-header-text">
+                    {{ card.cardName }}
+                  </mat-card-title>
+                </mat-card-header>
+                <mat-card-actions class="actionsCardTwo">
+                  <div class="row actionsCardTwoarrow">
+                    <a routerLink="/contact" routerLinkActive="active">Przejdź</a>
+                    <mat-icon class="ml-2" style="padding-top: 3px">arrow_forward</mat-icon>
+                  </div>
+                </mat-card-actions>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
