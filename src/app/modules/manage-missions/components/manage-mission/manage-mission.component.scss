@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
+
+.settingPage {
+  background-image: url('/assets/images/layered-waves-haikei.svg');
+  height: 1080px;
+  width: 1620px;
+}
+
+.font-main {
+  font-family: 'Open Sans';
+}
+
+.img {
+  margin-left: 20px;
+}
+
+.all-misions {
+  background-color: #dde8f9;
+  width: 240px;
+  margin-right: -20px;
+}
+
+.setPage {
+  background-color: white;
+  width: 1930px;
+  height: 1110px;
+}
+
+.img {
+  height: 50px;
+  width: 90px;
+  margin-left: 60px;
+  cursor: pointer;
+}
+
+.headingMain {
+  margin-left: 85px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.missionDataContainer {
+  height: 450px;
+  width: 950px;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 1;
+  margin-left: 100px;
+  margin-top: 70px;
+}
+
+.missionDataContainerTwo {
+  height: 850px;
+  width: 950px;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 1;
+  margin-left: 100px;
+  margin-top: 70px;
+}
+
+.imgTwo {
+  height: 240px;
+  width: 280px;
+  margin-left: 60px;
+}
+
+::ng-deep .mat-flat-button {
+  color: #f0fff3;
+  background-color: #274daa;
+  width: 160px;
+  height: 45px;
+  border-radius: 9px !important;
+  font-family: 'Open Sans';
+  font-size: 16px;
+}
+
+::ng-deep mat-spinner {
+  margin-top: 100px;
+}
