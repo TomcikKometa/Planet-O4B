@@ -14,8 +14,8 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid d-flex justify-content-start">
-    <div class="row">
+  <div class="headingModules">
+    <div class="row d-flex">
       <div *ngFor="let card of UserDashboardCards">
         <mat-card class="ml-2 mr-2">
           <mat-card-header>
@@ -31,19 +31,15 @@
   <div class="headingModules">
     <div class="font-main" style="color: #274daa; font-weight: 600; font-size: 32px">Moduły</div>
   </div>
-  <div class="col-11 ml-5">
+  <div style="width: 1300px !important;margin-left:100px;">
     <mat-grid-list cols="2" rowHeight="250px">
-      <mat-grid-tile
-        *ngFor="let card of modulesCards"
-        [colspan]="card.cols"
-        [rowspan]="card.rows"
-      >
-        <mat-card class="ml-2 mr-5 cardTwo">
+      <mat-grid-tile *ngFor="let card of modulesCards" [colspan]="card.cols" [rowspan]="card.rows" [style.width]="'300px'">
+        <mat-card class="cardTwo d-flex justify-content-start">
           <div class="row">
             <div class="col-12">
               <div class="cardThree row">
                 <mat-card-header class="col-md-6">
-                  <mat-card-title class="mat-card-header-text">
+                  <mat-card-title class="mat-card-header-text justify-content-start">
                     {{ card.cardName }}
                   </mat-card-title>
                 </mat-card-header>

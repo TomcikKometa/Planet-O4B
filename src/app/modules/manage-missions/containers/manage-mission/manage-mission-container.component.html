@@ -8,7 +8,7 @@
       (emitIndex)="setActiveIndex($event)"
     ></planet-side-nav-button>
 
-     <planet-side-nav-button
+    <planet-side-nav-button
       [label]="'Tajne Misje'"
       [image]="'../../../../assets/images/icon-configuration.svg'"
       [active]="activeIndex === 1"
@@ -35,6 +35,11 @@
         </div>
       </div>
     </div>
+
+    <div *ngIf="showMissions" class="d-flex justify-content-start mt-4 ml-5">
+      <button mat-flat-button (click)="addMission()">Dodaj misję</button>
+    </div>
+
     <div class="missionDataContainer" *ngIf="!showMissions">
       <div *ngIf="blankMissinData">
         <div class="d-flex justify-content-center">
@@ -54,6 +59,9 @@
     <div *ngIf="showMissions" class="missionDataContainerTwo mt-2">
       <planet-missions-list [missions]="missions"></planet-missions-list>
     </div>
-  </section>
-  
+  </section>  
+
+  <section></section>
+
+  <section></section>
 </div>
