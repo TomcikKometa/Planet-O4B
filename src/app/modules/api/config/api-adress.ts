@@ -6,3 +6,7 @@ export enum ApiUserUrl {
 export enum ApiDataUrl {
     MISSIONS = 'missions-data-table'
 }
+
+export enum ApiRouterAdresses {
+    SPECIAL_POINTS_ADRESSES = 'special-points-adresses'
+}

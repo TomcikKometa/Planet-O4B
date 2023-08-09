@@ -1,52 +1,31 @@
 <div class="row">
-  <div class="setNav">
-    <div class="row mt-5">
-      <img class="img" src="../../../../assets/images/icon-resources.svg" />
-      <p
-        style="
-          margin-top: 15px;
-          font-size: 18px;
-          font-family: 600;
-          font: 'Open Sans';
-          color: #274daa;
-          margin-left: 10px;
-        "
-      >
-        Wszystkie misje
-      </p>
-    </div>
-    <div class="row mt-2">
-      <img class="img" src="../../../../assets/images/icon-configuration.svg" />
-      <p
-        style="
-          margin-top: 15px;
-          font-size: 18px;
-          font-family: 600;
-          font: 'Open Sans';
-          color: #274daa;
-          margin-left: 10px;
-        "
-      >
-        Tajne misje
-      </p>
-    </div>
-    <div class="row mt-2">
-      <img class="img" src="../../../../assets/images/icon-translation.svg" />
-      <p
-        style="
-          margin-top: 15px;
-          font-size: 18px;
-          font-family: 600;
-          font: 'Open Sans';
-          color: #274daa;
-          margin-left: 10px;
-        "
-      >
-        Specjalne misje
-      </p>
-    </div>
-  </div>
-  <div class="settingPage">
+  <section class="setNav">
+    <planet-side-nav-button
+      [label]="'Wszystkie misje'"
+      [image]="'../../../../assets/images/icon-resources.svg'"
+      [active]="activeIndex === 0"
+      [index]="0"
+      (emitIndex)="setActiveIndex($event)"
+    ></planet-side-nav-button>
+
+     <planet-side-nav-button
+      [label]="'Tajne Misje'"
+      [image]="'../../../../assets/images/icon-configuration.svg'"
+      [active]="activeIndex === 1"
+      [index]="1"
+      (emitIndex)="setActiveIndex($event)"
+    ></planet-side-nav-button>
+
+    <planet-side-nav-button
+      [label]="'Specjalne misje'"
+      [image]="'../../../../assets/images/icon-translation.svg'"
+      [active]="activeIndex === 2"
+      [index]="2"
+      (emitIndex)="setActiveIndex($event)"
+    ></planet-side-nav-button>
+  </section>
+
+  <section *ngIf="activeIndex === 0" class="settingPage">
     <div class="d-flex justify-content-start">
       <div class="col-12 headingMain row">
         <div class="font-main" style="color: #274daa; font-weight: 600; font-size: 46px">Zarządzanie misjami!</div>
@@ -72,8 +51,9 @@
       </div>
       <div *ngIf="isSpinner" class="spinner d-flex justify-content-center"><mat-spinner></mat-spinner></div>
     </div>
-    <div *ngIf="showMissions" class="missionDataContainerTwo">
-        <planet-missions-list></planet-missions-list>
+    <div *ngIf="showMissions" class="missionDataContainerTwo mt-2">
+      <planet-missions-list [missions]="missions"></planet-missions-list>
     </div>
-  </div>
+  </section>
+  
 </div>

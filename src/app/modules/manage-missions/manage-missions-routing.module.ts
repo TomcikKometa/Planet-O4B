@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ManageMissionComponent } from './components/manage-mission/manage-mission.component';
+import { ManageMissionContainerComponent } from './containers/manage-mission/manage-mission-container.component';
 
 export enum Misisons {
   MAIN = ''
@@ -9,7 +9,7 @@ export enum Misisons {
 const routes: Routes = [
   {
     path:Misisons.MAIN,
-    component:ManageMissionComponent
+    component:ManageMissionContainerComponent
   }
 ];
 

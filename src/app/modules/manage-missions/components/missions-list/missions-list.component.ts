@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MissionTableData } from 'src/app/modules/api/model/mission-table-data';
 
 @Component({
   selector: 'planet-missions-list',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./missions-list.component.scss']
 })
 export class MissionsListComponent  {
+  @Input() missions: MissionTableData[] = [];
 
   private static readonly _DISPLAYCOLUMNS: string[] = ['Kryptonim misji', 'Termin misji', 'Status', 'Budżet misji', 'Więcej'];
 

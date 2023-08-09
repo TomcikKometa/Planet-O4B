@@ -5,21 +5,18 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './modules/core/core.module';
-import { FooterComponent } from './modules/ui/footer/footer.component';
-import { HeaderComponent } from './modules/ui/header/header.component';
-
+import { UiModule } from './modules/ui/ui.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    UiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

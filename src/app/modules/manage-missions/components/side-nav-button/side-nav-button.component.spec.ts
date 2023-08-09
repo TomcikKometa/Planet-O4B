@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManageMissionComponent } from './manage-mission.component';
+import { SideNavButtonComponent } from './side-nav-button.component';
 
-describe('ManageMissionComponent', () => {
-  let component: ManageMissionComponent;
-  let fixture: ComponentFixture<ManageMissionComponent>;
+describe('SideNavButtonComponent', () => {
+  let component: SideNavButtonComponent;
+  let fixture: ComponentFixture<SideNavButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ManageMissionComponent ]
+      declarations: [ SideNavButtonComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ManageMissionComponent);
+    fixture = TestBed.createComponent(SideNavButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
