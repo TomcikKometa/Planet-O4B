@@ -3,20 +3,25 @@
 
 .settingPage {
   background-image: url('/assets/images/layered-waves-haikei.svg');
-  height: 1080px;
-  width: 1920px;
+  background-size: 100%;
+  padding: 0 11% 0 11%;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  min-width: 80%;
 }
 
 .headingMain {
-  margin-left: 200px;
   margin-top: 60px;
-  align-items: center;
+  align-content: start;
 }
 
+
 .headingModules {
-  margin-left: 210px;
   margin-top: 40px;
-  align-items: center;
+  align-items: start;
 }
 
 .font-main {
@@ -65,13 +70,11 @@
 }
 
 ::ng-deep .mat-grid-list {
-  margin-left: 135px;
-  margin-right: 170px;
   border-radius: 20px !important;
+  margin-left: -160px;
+  
   & ::ng-deep .cardTwo {
-    margin-left: -150px;
-    margin-right: -190px;
-    width: 700px !important;
+    width: 640px !important;
     border-radius: 20px !important;
     background-color: white;
   }
@@ -81,7 +84,6 @@
     background-color: red;
     border-radius: 20px 0 0 20px !important;
     margin-top: -16px !important;
-    margin-left: -20px;
   }
   & ::ng-deep .mat-card-header-text {
     width: 360px !important;
@@ -98,4 +100,5 @@
       width: 120px;
     }
   }
+
 }
