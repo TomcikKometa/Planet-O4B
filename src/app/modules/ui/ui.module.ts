@@ -10,6 +10,6 @@ const components: Type<unknown>[] = [FooterComponent, HeaderComponent];
 @NgModule({
   declarations: [...components],
   imports: [CommonModule, UiRoutingModule],
-  exports:[...components]
+  exports: [...components]
 })
 export class UiModule {}
