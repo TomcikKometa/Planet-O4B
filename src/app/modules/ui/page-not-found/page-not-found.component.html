@@ -1,1 +1,22 @@
-<p>page-not-found works!</p>
+<div class="d-flex justify-content-center settingPage">
+  <button (click)="navigateToMainDashboard()">
+    <div class="row sideNav">
+      <div class="col settingButon" >
+        <div><span>Przejdż na</span></div>
+        <div><span>stronę główną</span></div>
+        <button class="mt-5 ml-5">
+          <span (click)="navigateToMainDashboard()">Strona główna</span>
+        </button>
+      </div>
+    </div>
+  </button>
+
+  <div class="container heading">
+    <div class="row">
+      <div class="col-6"><span class="d-flex justify-content-center">404</span></div>
+    </div>
+    <div class="row">
+      <div class="col-6"><span>Page Not Found</span></div>
+    </div>
+  </div>
+</div>
