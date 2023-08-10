@@ -1,67 +1,59 @@
-<div class="row">
-  <section class="setNav">
-    <planet-side-nav-button
-      [label]="'Wszystkie misje'"
-      [image]="'../../../../assets/images/icon-resources.svg'"
-      [active]="activeIndex === 0"
-      [index]="0"
-      (emitIndex)="setActiveIndex($event)"
-    ></planet-side-nav-button>
+<div class="settingPage">
+  <div class="row hiro">
+    <section class="setNav">
+      <planet-side-nav-button
+        [label]="'Wszystkie misje'"
+        [image]="'../../../../assets/images/icon-resources.svg'"
+        [active]="activeIndex === 0"
+        [index]="0"
+        (emitIndex)="setActiveIndex($event)"
+      ></planet-side-nav-button>
 
-    <planet-side-nav-button
-      [label]="'Tajne Misje'"
-      [image]="'../../../../assets/images/icon-configuration.svg'"
-      [active]="activeIndex === 1"
-      [index]="1"
-      (emitIndex)="setActiveIndex($event)"
-    ></planet-side-nav-button>
+      <planet-side-nav-button
+        [label]="'Tajne Misje'"
+        [image]="'../../../../assets/images/icon-configuration.svg'"
+        [active]="activeIndex === 1"
+        [index]="1"
+        (emitIndex)="setActiveIndex($event)"
+      ></planet-side-nav-button>
 
-    <planet-side-nav-button
-      [label]="'Specjalne misje'"
-      [image]="'../../../../assets/images/icon-translation.svg'"
-      [active]="activeIndex === 2"
-      [index]="2"
-      (emitIndex)="setActiveIndex($event)"
-    ></planet-side-nav-button>
-  </section>
+      <planet-side-nav-button
+        [label]="'Specjalne misje'"
+        [image]="'../../../../assets/images/icon-translation.svg'"
+        [active]="activeIndex === 2"
+        [index]="2"
+        (emitIndex)="setActiveIndex($event)"
+      ></planet-side-nav-button>
+    </section>
 
-  <section *ngIf="activeIndex === 0" class="settingPage">
-    <div class="d-flex justify-content-start">
-      <div class="col-12 headingMain row">
+    <section *ngIf="activeIndex === 0" class="hiroTwo">
+      <div class="row" style="align-items: center">
         <div class="font-main" style="color: #274daa; font-weight: 600; font-size: 46px">Zarządzanie misjami!</div>
-        <div style="font-size: 42px; margin-bottom: 10px; color: #274daa; margin-left: 17px; margin-right: 4px">|</div>
-        <div class="col-8 mt-2 align-content-center">
-          <div class="font-main" style="font-size: 16px; color: #274daa">Znajdziesz tutaj swoje misje specjalne.</div>
-        </div>
+        <div class="span-headingTwo" style="font-size: 42px; margin-bottom: 10px; color: #274daa">|</div>
+        <div class="span-heading" style="font-size: 16px; color: #274daa">Znajdziesz tutaj swoje misje specjalne.</div>
       </div>
-    </div>
-
-    <div *ngIf="showMissions" class="d-flex justify-content-start mt-4 ml-5">
-      <button mat-flat-button (click)="addMission()">Dodaj misję</button>
-    </div>
-
-    <div class="missionDataContainer" *ngIf="!showMissions">
-      <div *ngIf="blankMissinData">
-        <div class="d-flex justify-content-center">
-          <span style="margin-top: 15px; font-size: 18px; font-family: 600; font: 'Open Sans'; color: #274daa">
-            Tu jest pusto ale tylko chwilowo
-          </span>
-        </div>
-        <div class="d-flex justify-content-center mt-3">
-          <img class="imgTwo" src="../../../../assets/images/illustration.svg" />
-        </div>
-        <div class="d-flex justify-content-center mt-5">
-          <button mat-flat-button (click)="showMisisonData()">Załaduj misje</button>
-        </div>
+      <div *ngIf="showMissions" class="d-flex justify-content-start mt-4 ml-5">
+        <button mat-flat-button (click)="addMission()">Dodaj misję</button>
       </div>
-      <div *ngIf="isSpinner" class="spinner d-flex justify-content-center"><mat-spinner></mat-spinner></div>
-    </div>
-    <div *ngIf="showMissions" class="missionDataContainerTwo mt-2">
-      <planet-missions-list [missions]="missions"></planet-missions-list>
-    </div>
-  </section>  
-
-  <section></section>
-
-  <section></section>
+      <div class="missionDataContainer" *ngIf="!showMissions">
+        <div *ngIf="blankMissinData">
+          <div class="d-flex justify-content-center">
+            <span style="margin-top: 15px; font-size: 18px; font-family: 600; font: 'Open Sans'; color: #274daa">
+              Tu jest pusto ale tylko chwilowo
+            </span>
+          </div>
+          <div class="d-flex justify-content-center mt-3">
+            <img class="imgTwo" src="../../../../assets/images/illustration.svg" />
+          </div>
+          <div class="d-flex justify-content-center mt-5">
+            <button mat-flat-button (click)="showMisisonData()">Załaduj misje</button>
+          </div>
+        </div>
+        <div *ngIf="isSpinner" class="spinner d-flex justify-content-center"><mat-spinner></mat-spinner></div>
+      </div>
+      <div *ngIf="showMissions" class="missionDataContainerTwo mt-2">
+        <planet-missions-list [missions]="missions"></planet-missions-list>
+      </div>
+    </section>
+  </div>
 </div>

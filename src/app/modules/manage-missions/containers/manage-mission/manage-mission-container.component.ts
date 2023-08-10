@@ -62,7 +62,6 @@ export class ManageMissionContainerComponent implements OnInit, AfterViewInit {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
         case 'codename':
-          console.log(this.missions);
           return this.compare(a.codename, b.codename, isAsc);
         case 'missionsDate':
           return this.compare(a.missionsDate, b.missionsDate, isAsc);
