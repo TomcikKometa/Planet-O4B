@@ -2,8 +2,9 @@
 
 .settingPage {
   background-image: url('/assets/images/wave-haikei.svg');
-  height: 1080px;
-  width: 1920px;
+  height: 100%;
+  width: 100%;
+  background-repeat: repeat-x;
 }
 
 button {
