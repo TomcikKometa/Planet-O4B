@@ -3,6 +3,8 @@ import { NgModule, Type } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -30,7 +32,9 @@ const containers: Type<unknown>[] = [ManageMissionContainerComponent];
     MatSortModule,
     MatPaginatorModule,
     MatDividerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule,
+    MatMenuModule
   ]
 })
 export class ManageMissionsModule {}
