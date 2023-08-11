@@ -36,7 +36,7 @@
   <ng-container matColumnDef="Więcej">
     <th mat-header-cell *matHeaderCellDef class="table-setting-right">Więcej</th>
     <td class="table-row-setting-middle" mat-cell *matCellDef="let mission">
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #menu="matMenu">

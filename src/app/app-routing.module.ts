@@ -27,6 +27,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/manage-missions/manage-missions.module').then(m => m.ManageMissionsModule)
   },
   {
+    path: RoutePath.SPECIAL_POINTS_ADRESSES,
+    loadChildren: () => import('./modules/special-points-addresses/special-points-addresses.module').then(m => m.SpecialPointsAddressesModule)
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: RoutePath.DASHBOARD

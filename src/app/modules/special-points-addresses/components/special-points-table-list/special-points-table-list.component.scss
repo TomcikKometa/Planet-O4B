@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
+
+.table-setting-middle {
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  font-family: 'Open Sans';
+  background-color: #dde8f9;
+  border-bottom-color: #dde8f9;
+  z-index: 1;
+  font-size: 16px;
+  height: 5rem;
+  padding-left: 7.6rem !important;
+}
+
+.table-setting-status {
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  font-family: 'Open Sans';
+  background-color: #dde8f9;
+  border-bottom-color: #dde8f9;
+  z-index: 1;
+  font-size: 16px;
+  height: 5rem;
+  padding-left: 4.6rem !important;
+}
+
+.table-setting-budget {
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  font-family: 'Open Sans';
+  background-color: #dde8f9;
+  border-bottom-color: #dde8f9;
+  z-index: 1;
+  font-size: 16px;
+  height: 5rem;
+  padding-left: 6.6rem !important;
+}
+
+.table-heading-setting-left {
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  font-family: 'Open Sans';
+  background-color: #dde8f9;
+  border-radius: 10px 0px 0px 10px;
+  z-index: 1;
+  padding-top: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 16px;
+  padding-left: 3rem;
+  height: 5rem;
+}
+
+.table-setting-right {
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+  font-family: 'Open Sans';
+  background-color: #dde8f9;
+  border-radius: 0px 10px 10px 0px;
+  z-index: 1;
+  padding-right: 1.5rem;
+  font-size: 16px;
+  height: 5rem;
+  padding-left: 1rem;
+  width: 2.5rem;
+  border-bottom-color: #dde8f9;
+}
+
+::ng-deep .mat-table-th {
+  z-index: -1;
+  margin-top: 20px;
+}
+
+.table-row-setting-left {
+  color: black;
+  height: 7.4rem;
+  padding-top: 2.7rem;
+  border-bottom: 1px solid;
+  border-bottom-color: #dde8f9;
+  font-family: 'Open Sans';
+  padding-left: 3rem;
+}
+
+.table-row-setting-middle {
+  color: black;
+  border-bottom: 1px solid;
+  border-bottom-color: #dde8f9;
+  font-family: 'Open Sans';
+  margin-top: 3rem;
+  font-size: 16px;
+  padding: 1rem;
+  text-align: center;
+  height: 7rem;
+}
+
+::ng-deep .table-button {
+  border: 2px solid;
+  border-color: #274daa;
+  background-color: white;
+  color: #274daa;
+  border-radius: 10px 10px 10px 10px !important;
+  font-size: 16px;
+  text-align: center;
+  align-items: center;
+  height: 60%;
+  width: 150px;
+  font-family: 'Open Sans';
+}

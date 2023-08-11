@@ -30,7 +30,6 @@ export class ManageMissionContainerComponent implements OnInit, AfterViewInit {
   }
 
   public showMisisonData(): void {
-
     this.blankMissinData = false;
     this.isSpinner = true;
     this.manageMissionsService.getMisisionsData().subscribe((missions: any) => {
@@ -73,7 +72,6 @@ export class ManageMissionContainerComponent implements OnInit, AfterViewInit {
           return 0;
       }
     });
-    
   }
   private compare(a: number | string, b: number | string, isAsc: boolean): any {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
@@ -81,13 +79,12 @@ export class ManageMissionContainerComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.missions;
-  };
+  }
 
-  public addMission(): void{
+  public addMission(): void {
     this.dialog.open(AddMissisionDialogComponent, {
       width: '50vw',
-      position: {top:'2vw', left:'25vw'}
+      position: { top: '2vw', left: '25vw' }
     });
   }
 }
-
