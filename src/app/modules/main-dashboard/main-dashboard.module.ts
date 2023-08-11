@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { MainDashboardComponent } from './components/main-dashboard/main-dashboard.component';
 import { MainDashboardRoutingModule } from './main-dashboard-routing.module';
@@ -19,7 +20,8 @@ import { MainDashboardRoutingModule } from './main-dashboard-routing.module';
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
   ]
   })
 export class MainDashboardModule { }

@@ -1,59 +1,82 @@
-<div class="settingPage">
-  <div class="d-flex justify-content-start">
-    <div class="col-12 headingMain row">
-      <div class="font-main" style="color: #274daa; font-weight: 600; font-size: 46px">Witaj!</div>
-      <div style="font-size: 42px; margin-bottom: 10px; color: #274daa; margin-left: 17px; margin-right: 4px">|</div>
-      <div class="col-8 mt-2">
-        <div class="font-main" style="font-size: 16px; color: #274daa">
-          Jesteś agentem do zadań specjalnych na zielonej planecie O4B.
-        </div>
-        <div class="font-main" style="font-size: 16px; margin-bottom: 10px; color: #274daa">
-          To jest twój system do zarządzania misjami specjalnymi realizowanymi przez Ciebie i twój zespół. Podążaj za
-          białym kursorem.
-        </div>
-      </div>
+<section class="page-container">
+  <section class="page-title">
+    <h1 class="welcome">Witaj!</h1>
+    <span>
+      Jesteś agentem do zadań specjalnych na zielonej planecie O4B.
+      <br />
+      To jest twój system do zarządzania misjami specjalnymi realizowanymi przez Ciebie i twój zespół. Podążaj za białym
+      kursorem.
+    </span>
+  </section>
+
+  <div class="row d-flex mt-5">
+    <div *ngFor="let card of userDashboardCards">
+      <mat-card
+        class="ml-2 mr-2 dashboard-card"
+        [ngClass]="{
+          first: userDashboardCards.indexOf(card) === 0,
+          second: userDashboardCards.indexOf(card) === 1,
+          third: userDashboardCards.indexOf(card) === 2
+        }"
+      >
+        <mat-card-header>
+          <mat-card-title> {{ card.cardName }} </mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+          <button class="ml-4 mt-3" mat-button>{{ card.buttonName }}</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
-  <div class="headingModules">
-    <div class="row d-flex">
-      <div *ngFor="let card of UserDashboardCards">
-        <mat-card class="ml-2 mr-2">
-          <mat-card-header>
-            <mat-card-title class="mat-card-header-title" style="font-size: 26px"> {{ card.cardName }} </mat-card-title>
-          </mat-card-header>
-          <mat-card-actions>
-            <button class="ml-4 mt-3" mat-button>{{ card.buttonName }}</button>
-          </mat-card-actions>
-        </mat-card>
+
+  <h2 class="modules title">Moduły</h2>
+
+  <mat-grid-list cols="2" rowHeight="250px" class="box">
+    <mat-grid-tile *ngFor="let card of modulesCards">
+      <div
+        [ngClass]="{
+          moduleFirst: modulesCards.indexOf(card) === 0,
+          moduleSecond: modulesCards.indexOf(card) === 1,
+          moduleThird: modulesCards.indexOf(card) === 2,
+          moduleFourth: modulesCards.indexOf(card) === 3
+        }"
+      >
+        <div class="mat-grid-card row justify-content-between">
+          <span>{{ card.cardName }}</span>
+          <button mat-icon-button [matMenuTriggerFor]="menu" class="mr-5">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item disabled>
+              <mat-icon>create</mat-icon>
+              <span>W budowie</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>picture_as_pdf</mat-icon>
+              <span>W budowie</span>
+            </button>
+          </mat-menu>
+        </div>
+        <div class="actionsCardTwo"><a routerLink="/{{ card.router }}" routerLinkActive="active">Przejdź <mat-icon class="ml-2 actionsCardTwoarrow">arrow_forward</mat-icon></a></div>
       </div>
-    </div>
-  </div>
-  <div class="headingModules">
-    <div class="font-main" style="color: #274daa; font-weight: 600; font-size: 32px">Moduły</div>
-  </div>
-  <div style="width: 1300px !important;margin-left:100px;">
-    <mat-grid-list cols="2" rowHeight="250px">
-      <mat-grid-tile *ngFor="let card of modulesCards" [colspan]="card.cols" [rowspan]="card.rows" [style.width]="'300px'">
-        <mat-card class="cardTwo d-flex justify-content-start">
-          <div class="row">
-            <div class="col-12">
-              <div class="cardThree row">
-                <mat-card-header class="col-md-6">
-                  <mat-card-title class="mat-card-header-text justify-content-start">
-                    {{ card.cardName }}
-                  </mat-card-title>
-                </mat-card-header>
-                <mat-card-actions class="actionsCardTwo">
-                  <div class="row actionsCardTwoarrow">
-                    <a routerLink="/{{ card.router }}" routerLinkActive="active">Przejdź</a>
-                    <mat-icon class="ml-2" style="padding-top: 3px">arrow_forward</mat-icon>
-                  </div>
-                </mat-card-actions>
-              </div>
+
+      <!-- <mat-card class="cardTwo d-flex justify-content-start">
+        <div class="row col-12">
+            <div class="cardThree row">
+              <mat-card-header class="col-md-6">
+                <mat-card-title class="mat-card-header-text justify-content-start">
+                  {{ card.cardName }}
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-actions class="actionsCardTwo">
+                <div class="row actionsCardTwoarrow">
+                  <a routerLink="/{{ card.router }}" routerLinkActive="active">Przejdź</a>
+                  <mat-icon class="ml-2" style="padding-top: 3px">arrow_forward</mat-icon>
+                </div>
+              </mat-card-actions>
             </div>
-          </div>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
-</div>
+        </div>
+      </mat-card> -->
+    </mat-grid-tile>
+  </mat-grid-list>
+</section>

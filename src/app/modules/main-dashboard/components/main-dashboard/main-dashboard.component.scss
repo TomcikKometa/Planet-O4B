@@ -1,6 +1,55 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
 
+.page-container {
+  background-image: url('/assets/images/layered-waves-haikei.svg');
+  background-size: 100%;
+  width: 100%;
+  padding-left: 11%;
+  padding-right: 11%;
+  padding-top: 2%;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 30px;
+  justify-content: start;
+  font-family: 'Open Sans';
+  color: var(--unnamed-color-274daa);
+
+  .welcome {
+    font-weight: 700;
+    padding-right: 30px;
+    border-right: 2px solid var(--unnamed-color-274daa);
+  }
+}
+
+.dashboard-card {
+  width: 400px;
+  color: var(--unnamed-color-ffffff);
+}
+.first {
+  background-image: linear-gradient(to right, var(--unnamed-color-7da6ed), var(--unnamed-color-dde8f9));
+}
+.second {
+  background-color: var(--unnamed-color-27c722);
+}
+.third {
+  background-color: var(--unnamed-color-D395A6);
+}
+
+.modules {
+  color: var(--unnamed-color-274daa);
+  margin-top: 2rem;
+
+  .title {
+    font-family: 'Open Sans';
+    font-weight: 700;
+  }
+}
+
 .settingPage {
   background-image: url('/assets/images/layered-waves-haikei.svg');
   background-size: 100%;
@@ -9,22 +58,41 @@
   width: 100%;
 }
 
-.container {
-  min-width: 80%;
+
+.moduleFirst {
+  width: 600px;
+  height: 200px;
+  background-color: #ffffff;
+  border-left: 10px solid var(--unnamed-color-274daa);
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: 'Open Sans';
 }
-
-.headingMain {
-  margin-top: 60px;
-  align-content: start;
+.moduleSecond {
+  width: 600px;
+  height: 200px;
+  background-color: #ffffff;
+  border-left: 10px solid var(--unnamed-color-27c722);
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: 'Open Sans';
 }
-
-
-.headingModules {
-  margin-top: 40px;
-  align-items: start;
+.moduleThird {
+  width: 600px;
+  height: 200px;
+  background-color: #ffffff;
+  border-left: 10px solid var(--unnamed-color-D496A7);
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: 'Open Sans';
 }
-
-.font-main {
+.moduleFourth {
+  width: 600px;
+  height: 200px;
+  background-color: #ffffff;
+  border-left: 10px solid var(--unnamed-color-7da6ed);
+  border-radius: 15px;
+  font-size: 1rem;
   font-family: 'Open Sans';
 }
 
@@ -45,16 +113,11 @@
   }
 }
 
-::ng-deep .container-fluid {
-  margin-top: 2%;
-  margin-left: 205px;
-}
-
-::ng-deep .mat-card-header-title {
-  padding-top: 50px;
-  height: 120px;
+.mat-grid-card {
+  padding-top: 2.5rem;
+  padding-left: 2.5rem;
   font-family: 'Open Sans';
-  font-size: 45px;
+  font-size: 28px;
 }
 
 ::ng-deep .mat-card-actions {
@@ -69,36 +132,20 @@
   outline: white;
 }
 
-::ng-deep .mat-grid-list {
-  border-radius: 20px !important;
-  margin-left: -160px;
-  
-  & ::ng-deep .cardTwo {
-    width: 640px !important;
-    border-radius: 20px !important;
-    background-color: white;
-  }
-  & ::ng-deep .cardThree {
-    width: 20px;
-    height: 220px;
-    background-color: red;
-    border-radius: 20px 0 0 20px !important;
-    margin-top: -16px !important;
-  }
-  & ::ng-deep .mat-card-header-text {
-    width: 360px !important;
-    font-family: 'Open Sans';
-    font-size: 26px;
-    padding-top: 25px;
-    font-weight: 600;
-  }
-  & ::ng-deep .actionsCardTwo {
-    margin-left: 60px;
-    margin-top: 20px;
-    width: 150px;
-    & ::ng-deep .actionsCardTwoarrow {
-      width: 120px;
-    }
-  }
 
+
+::ng-deep .box {
+  width: 85% !important;
+  margin-left: -20px !important;
+}
+
+.actionsCardTwo {
+  margin-left: 1.5rem;
+  margin-top: 1.4rem;
+  width: 150px;
+  height: 3rem;
+  margin-bottom: 2rem;
+  .actionsCardTwoarrow {
+    padding-top: 0.4rem;
+  }
 }
