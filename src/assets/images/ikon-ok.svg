@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="34" viewBox="0 0 34 34">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2265" data-name="Rectangle 2265" width="34" height="34" fill="#27c722"/>
+    </clipPath>
+  </defs>
+  <g id="ikon-ok" transform="translate(0 0)">
+    <g id="Group_10006" data-name="Group 10006" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path id="Union_47" data-name="Union 47" d="M10.412,32.671A16.993,16.993,0,1,1,17,34h-.025A16.849,16.849,0,0,1,10.412,32.671ZM2.031,17.086A14.968,14.968,0,1,0,17,2.116,14.969,14.969,0,0,0,2.031,17.086ZM14.418,23.5,8.285,17.368a1.353,1.353,0,0,1-.373-1.318A1.336,1.336,0,0,1,9.2,15.071a1.321,1.321,0,0,1,.937.392L15.1,20.421a.389.389,0,0,0,.55,0h0l8.515-8.57a1.316,1.316,0,0,1,1.107-.393,1.354,1.354,0,0,1,1,.654,1.293,1.293,0,0,1,.085,1.151v0a1.347,1.347,0,0,1-.314.471L16.3,23.5a1.333,1.333,0,0,1-1.881,0Z" transform="translate(0 -0.001)" fill="#27c722" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -4,4 +4,5 @@ export interface ModuleCards {
   cols: number;
   rows: number;
   router: any;
+  matIcon:string;
 }

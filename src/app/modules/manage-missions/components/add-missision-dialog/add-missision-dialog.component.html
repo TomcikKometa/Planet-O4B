@@ -1,46 +1,68 @@
 <div class="settingPage">
-  <h2>Dodawanie misji</h2>
-  <span>Wprowadź dane</span>
-  <form class="mt-4 tomek">
-    <div class="row">
-      <div class="col-6">
-        <mat-form-field class="">
-          <mat-label>Kryptonim misji</mat-label>
-          <input matInput type="text" class="input" formControlName="" />
-        </mat-form-field>
+  <div *ngIf="!changedViewDialog">
+    <h2 class="mat-dialog-heading">Dodawanie misji</h2>
+    <span>Wprowadź dane.</span>
+    <form [formGroup]="missionFormGroup" class="mt-4 tomek">
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field class="">
+            <mat-label>Kryptonim misji</mat-label>
+            <input matInput type="text" class="input" formControlName="{{ missionFormControlsName.CODENAME }}" />
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field class="">
+            <mat-label>Termin misji</mat-label>
+            <input
+              matInput
+              type="date"
+              [value]="date"
+              data-date-format="DD-MM-YYYY"
+              formControlName="{{ missionFormControlsName.MISSION_DATE }}"
+            />
+          </mat-form-field>
+        </div>
       </div>
-      <div class="col-6">
-        <mat-form-field class="">
-          <mat-label>Termin misji</mat-label>
-          <input matInput type="text" formControlName="" [matDatepicker]="datepicker" />
-          <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
-          <mat-datepicker #datepicker>
-            <mat-datepicker-actions>
-              <button mat-button matDatepickerCancel>Anuluj</button>
-              <button mat-raised-button color="primary" matDatepickerApply>Zatwierdź</button>
-            </mat-datepicker-actions>
-          </mat-datepicker>
-        </mat-form-field>
+      <div class="row">
+        <div class="mat-form-budget col-5">
+          <mat-form-field>
+            <mat-label>Budżet misji</mat-label>
+            <input
+              matInput
+              type="text"
+              currencyMask
+              [options]="currencyConfig"
+              class="input"
+              formControlName="{{ missionFormControlsName.BUDGET }}"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-1 currency"><span>zł</span></div>
+        <div class="col-6">
+          <mat-form-field>
+            <mat-label>Status misji</mat-label>
+            <mat-select formControlName="{{ missionFormControlsName.STATUS }}" value="status.value">
+              <mat-option *ngFor="let status of statuses" value="{{ status.value }}"> {{ status.type }} </mat-option>
+            </mat-select>
+            <input matInput type="text" formControlName="{{ missionFormControlsName.STATUS }}" />
+          </mat-form-field>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-6">
-        <mat-form-field>
-          <mat-label>Budżet misji</mat-label>
-          <input matInput type="text" class="input" formControlName="" />
-        </mat-form-field>
-      </div>
-      <div class="col-6">
-        <mat-form-field>
-          <mat-label>Status misji</mat-label>
-          <input matInput type="text" formControlName="" />
-        </mat-form-field>
-      </div>
-    </div>
-  </form>
+    </form>
+  </div>
+</div>
+<div *ngIf="!changedViewDialog" class="color d-flex justify-content-end">
+  <button class="m-3 button buttonCancel" (click)="close()">Anuluj</button>
+  <button class="m-3 button buttonSave" (click)="saveForm()">Zapisz</button>
 </div>
 
-<div class="color d-flex justify-content-end">
-  <button class="m-3 button">Tomek</button>
-  <button class="m-3 button">Tomek</button>
+<div *ngIf="changedViewDialog" class="settingPage">
+  <div class="settingPage afterActions">
+    <img src="../../../../assets/images/ikon-ok.svg" />
+    <span class="ml-2">Gratulacje utworzono misję specjalną {{ missionName }}.</span>
+  </div>
+</div>
+<div *ngIf="changedViewDialog" class="color d-flex justify-content-end">
+  <button class="m-3 button buttonAfterCancel" (click)="navigateToDashboard()">Wróć na dashboard</button>
+  <button class="m-3 button buttonAterSave" (click)="close()">Wroć do listy</button>
 </div>

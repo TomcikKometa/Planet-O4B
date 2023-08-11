@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
+
 .settingPage {
   margin: 3%;
+  
+  .afterActions {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    color: var(--unnamed-color-274daa);
+  }
 }
 
 mat-form-field {
@@ -8,21 +17,112 @@ mat-form-field {
   padding: 0px;
 }
 
+.mat-dialog-heading {
+  font-family: 'Open Sans';
+  color: var(--unnamed-color-274daa);
+  margin-bottom: 2rem;
+}
+
 ::ng-deep .mat-dialog-container {
-    margin: 0px !important;
-    padding: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
 }
 
-.color{
-    background-color:#DDE8F9;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 5rem;
-    height: 100px;
+.color {
+  background-color: #dde8f9;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 5rem;
+  height: 100px;
+  align-items: center !important;
 }
-.button {
-    height: 25px;
+::ng-deep .button {
+  height: 40px;
+  width: 160px;
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Open Sans';
+  border-color: var(--unnamed-color-274daa) !important;
+  border: 1px solid;
+  border-radius: 10px 10px 10px 10px !important;
+  font-size: 15px;
 }
 
+::ng-deep .buttonCancel {
+  background-color: var(--unnamed-color-ffffff) !important;
+  color: var(--unnamed-color-274daa);
+}
 
-  
+::ng-deep .buttonSave {
+  background-color: var(--unnamed-color-274daa) !important;
+  color: var(--unnamed-color-ffffff);
+}
+
+::ng-deep .buttonAfterCancel {
+  width: 220px;
+  background-color: var(--unnamed-color-ffffff) !important;
+  color: var(--unnamed-color-274daa) !important;
+}
+
+::ng-deep .buttonAterSave {
+  width: 160px;
+  background-color: var(--unnamed-color-274daa) !important;
+  color: var(--unnamed-color-ffffff) !important;
+}
+
+.currency {
+  padding-top: 1.3rem;
+  text-align: center;
+  padding-left: 2.3rem;
+}
+
+::ng-deep .mat-form-budget {
+  width: 20% !important;
+  padding-left: 1rem;
+}
+
+// ::ng-deep .mat-flat-button{
+//   height: 20px !important;
+//   width: 60px !important;
+// }
+
+::ng-deep .mat-select-value {
+  text-align: start !important;
+  padding-top: 1.2rem;
+  height: 2.2rem;
+  margin-bottom: 0.8rem;
+  font-size: 14px;
+}
+
+::ng-deep .mat-select {
+  height: 1rem;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  height: 4.5rem;
+}
+
+::ng-deep .buttonAfterAction {
+  height: 40px;
+  text-align: center;
+  font-weight: 800;
+  font-family: 'Open Sans';
+  border: 1px solid;
+  border-radius: 4px 4px 4px 4px !important;
+  font-size: 15px;
+
+  .afterCancel {
+    width: 300px;
+    background-color: var(--unnamed-color-ffffff) !important;
+    color: black !important;
+    border-color: var(--unnamed-color-274daa) !important;
+  }
+
+  .afterSave {
+    width: 100px;
+    background-color: var(--unnamed-color-274daa) !important;
+    color: yellow !important;
+    border-color: var(--unnamed-color-274daa) !important;
+  }
+}
+
