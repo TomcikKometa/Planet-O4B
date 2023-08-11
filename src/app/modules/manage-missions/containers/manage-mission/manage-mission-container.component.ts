@@ -86,7 +86,6 @@ export class ManageMissionContainerComponent implements OnInit, AfterViewInit {
   public addMission(): void{
     this.dialog.open(AddMissisionDialogComponent, {
       width: '50vw',
-      height: '30vw',
       position: {top:'2vw', left:'25vw'}
     });
   }
