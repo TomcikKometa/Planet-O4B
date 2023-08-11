@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
+
+.settingPage {
+  background-image: url('/assets/images/layered-waves-haikei.svg');
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+}
+
+.hiro {
+  height: 100%;
+  width: 100%;
+}
+
+.setNav {
+  padding-top: 20px;
+  width: 20%;
+  min-height: 100%;
+  background-color: white;
+}
+
+.hiroTwo {
+  padding-left: 5rem;
+  padding-top: 4rem;
+}
+
+.font-main {
+  font-family: 'Open Sans';
+}
+
+.mat-flat-button {
+  color: #f0fff3;
+  background-color: #274daa;
+  width: 160px;
+  height: 45px;
+  border-radius: 9px !important;
+  font-family: 'Open Sans';
+  font-size: 16px;
+}
+
+.missionDataContainerTwo {
+  height: 80%;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 1;
+  margin-left: 100px;
+  margin-top: 70px;
+  padding: 10px;
+}
