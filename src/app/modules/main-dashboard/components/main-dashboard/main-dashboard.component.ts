@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RoutePath } from 'src/app/app-routing.module';
-import { ApiDataUrl, ApiRouterAdresses } from 'src/app/modules/api/config/api-adress';
+import { ApiManageMissionUrl, ApiRouterAdresses } from 'src/app/modules/api/config/api-adress';
 import { ModuleCards } from 'src/app/modules/api/model/module-cards';
 import { UserDashboardCard } from 'src/app/modules/api/model/user-dashboard-card';
 import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
@@ -22,10 +22,10 @@ export class MainDashboardComponent {
     { id: 3, cardName: 'Twoje bazy', buttonName: 'Zobacz więcej', cardData: 8 }
   ];
   public modulesCards: ModuleCards[] = [
-    { id: 1, cardName: 'Zarządzanie misjami', cols: 1, rows: 1, router: RoutePath.MANAGE_MISSIONS },
-    { id: 2, cardName: 'Adresy punktów specjalnych', cols: 1, rows: 1, router: RoutePath.SPECIAL_POINTS_ADRESSES },
-    { id: 3, cardName: 'Teleportacja', cols: 1, rows: 1, router: RoutePath.TELEPORTATION },
-    { id: 4, cardName: 'Eksport / Import', cols: 1, rows: 1, router: RoutePath.EXPORT_IMPORT }
+    { id: 1, cardName: 'Zarządzanie misjami', cols: 1, rows: 1, router: RoutePath.MANAGE_MISSIONS, matIcon:'airplanemode_active' },
+    { id: 2, cardName: 'Adresy punktów specjalnych', cols: 1, rows: 1, router: RoutePath.SPECIAL_POINTS_ADRESSES, matIcon:'home'},
+    { id: 3, cardName: 'Teleportacja', cols: 1, rows: 1, router: RoutePath.TELEPORTATION, matIcon:'graphic_eq' },
+    { id: 4, cardName: 'Eksport / Import', cols: 1, rows: 1, router: RoutePath.EXPORT_IMPORT, matIcon:'import_export' }
   ];
 
   private readonly navigationSarvice: NavigationService = inject(NavigationService);

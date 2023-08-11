@@ -24,6 +24,7 @@
     "@ngx-translate/http-loader": "^7.0.0",
     "bootstrap": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "ng2-currency-mask": "^13.0.3",
     "ngx-toastr": "^14.0.0",
     "roboto-fontface": "^0.10.0",
     "rxjs": "~7.5.0",

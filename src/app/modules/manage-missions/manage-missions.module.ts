@@ -2,10 +2,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule, Type } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
@@ -20,7 +20,9 @@ import { MissionsListComponent } from './components/missions-list/missions-list.
 import { SideNavButtonComponent } from './components/side-nav-button/side-nav-button.component';
 import { ManageMissionContainerComponent } from './containers/manage-mission/manage-mission-container.component';
 import { ManageMissionsRoutingModule } from './manage-missions-routing.module';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { MatSelectModule } from '@angular/material/select';
 
 const components: Type<unknown>[] = [MissionsListComponent, SideNavButtonComponent, AddMissisionDialogComponent];
 const containers: Type<unknown>[] = [ManageMissionContainerComponent];
@@ -41,10 +43,12 @@ const containers: Type<unknown>[] = [ManageMissionContainerComponent];
     MatIconModule,
     MatMenuModule,
     MatInputModule,
-    MatFormFieldModule,
     ReactiveFormsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatFormFieldModule,
+    CurrencyMaskModule,
+    MatSelectModule
   ]
 })
 export class ManageMissionsModule {}

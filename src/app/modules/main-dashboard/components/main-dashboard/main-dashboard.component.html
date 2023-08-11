@@ -48,16 +48,17 @@
           </button>
           <mat-menu #menu="matMenu">
             <button mat-menu-item disabled>
-              <mat-icon>create</mat-icon>
-              <span>W budowie</span>
-            </button>
-            <button mat-menu-item disabled>
-              <mat-icon>picture_as_pdf</mat-icon>
+              <mat-icon> {{ card.matIcon }}</mat-icon>
               <span>W budowie</span>
             </button>
           </mat-menu>
         </div>
-        <div class="actionsCardTwo"><a routerLink="/{{ card.router }}" routerLinkActive="active">Przejdź <mat-icon class="ml-2 actionsCardTwoarrow">arrow_forward</mat-icon></a></div>
+        <div class="actionsCardTwo">
+          <a routerLink="/{{ card.router }}" routerLinkActive="active"
+          
+            >Przejdź <mat-icon class="ml-2 actionsCardTwoarrow">arrow_forward</mat-icon></a
+          >
+        </div>
       </div>
 
       <!-- <mat-card class="cardTwo d-flex justify-content-start">
