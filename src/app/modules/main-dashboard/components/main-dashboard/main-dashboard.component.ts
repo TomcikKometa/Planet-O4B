@@ -11,12 +11,12 @@ import { NavigationService } from 'src/app/modules/core/services/navigation/navi
   styleUrls: ['./main-dashboard.component.scss']
 })
 export class MainDashboardComponent {
-  public UserDashboardCards: UserDashboardCard[] = [
+  public userDashboardCards: UserDashboardCard[] = [
     {
       id: 1,
       cardName: 'Twoi agenci do zadań specjalnych',
       buttonName: 'Zobacz agentów',
-      cardData: 5
+      cardData: 5,
     },
     { id: 2, cardName: 'Twoje misje', buttonName: 'Sprawdź misje', cardData: 7 },
     { id: 3, cardName: 'Twoje bazy', buttonName: 'Zobacz więcej', cardData: 8 }
