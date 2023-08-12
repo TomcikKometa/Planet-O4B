@@ -15,6 +15,7 @@ import { SpecialPointsAdressesMatDialogComponent } from './components/special-po
 import { SpecialPointsTableListComponent } from './components/special-points-table-list/special-points-table-list.component';
 import { SpecialPointsAddressesComponent } from './containers/special-points-addresses/special-points-addresses.component';
 import { SpecialPointsAddressesRoutingModule } from './special-points-addresses-routing.module';
+import { UiModule } from '../ui/ui.module';
 
 const components: Type<unknown>[] = [
   SpecialPointsTableListComponent,
@@ -37,6 +38,7 @@ const containers: Type<unknown>[] = [SpecialPointsAddressesComponent];
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    UiModule
   ],
   providers: [
     {

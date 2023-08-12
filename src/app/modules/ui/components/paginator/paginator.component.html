@@ -1,0 +1,10 @@
+<div class="d-flex row  align-items-center">
+    <span class="mr-2">Rekordy na stronę</span>
+  <mat-form-field>
+    <mat-select  [(ngModel)]="selectedNumberOfItems" (selectionChange)="handlePaginationChange()">
+      <mat-option *ngFor="let paginatorSelectOption of paginatorSelectOptions" [value]="paginatorSelectOption.value">
+        {{ paginatorSelectOption.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
