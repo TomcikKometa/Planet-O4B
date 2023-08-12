@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginGuard } from './modules/core/guards/login/login.guard';
 import { PageNotFoundComponent } from './modules/ui/page-not-found/page-not-found.component';
 export enum RoutePath {
-  LOGIN = '',
+  LOGIN = 'login',
   DASHBOARD = 'dashboard',
   MANAGE_MISSIONS = 'manage-missions',
   SPECIAL_POINTS_ADRESSES = 'special-points-addresses',
-  TELEPORTATION = 'teleportacja',
+  TELEPORTATION = 'teleportation',
   EXPORT_IMPORT = 'export-import'
 }
 

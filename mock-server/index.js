@@ -8,13 +8,13 @@ const port = 8080;
 app.use(cors());
 
 app.post("/user/login", (request, response) => {
-  response.status = 403;
   response.send({ token: "abc"});
 });
 
-app.listen(port, () => {
-  console.log("Mock server is running on port: ", port);
+app.post("/post-mission", (request, response) => {
+  response.send();
 });
+
 
 app.get("/missions-data-table", (req, res) => {
   res.send([
@@ -108,5 +108,6 @@ app.get("/addresses-special-points", (req, res) => {
   ]);
 });
 
-// 
-// 'addresses-special-points
+app.listen(port, () => {
+  console.log("Mock server is running on port: ", port);
+});

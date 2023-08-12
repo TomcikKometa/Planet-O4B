@@ -8,7 +8,7 @@ export class MatDialogMissionFormService {
 
   private readonly formBuilder: FormBuilder = inject(FormBuilder);
 
-  public createLoginForm(): FormGroup {
+  public createMissionForm(): FormGroup {
     return this.formBuilder.group({
       [MatDialogMissionFormControlsName.CODENAME]: this.formBuilder.control('', {validators: [Validators.required]}),
       [MatDialogMissionFormControlsName.MISSION_DATE]: this.formBuilder.control('', {validators: [Validators.required]}),

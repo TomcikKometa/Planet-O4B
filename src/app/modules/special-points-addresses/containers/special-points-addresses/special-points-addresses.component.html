@@ -16,7 +16,7 @@
           
         </div>
         <div class="d-flex justify-content-start mt-4 ml-5">
-          <button mat-flat-button >Dodaj adres</button>
+          <button mat-flat-button (click)="addMissionAddress()">Dodaj adres</button>
         </div>
         <div class="missionDataContainerTwo mt-2">
             <planet-special-points-table-list [addresses]="addresses"></planet-special-points-table-list>

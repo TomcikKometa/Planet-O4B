@@ -1,10 +1,10 @@
 <header>
-   <planet-header *ngIf="isLoggedIn$ | async"></planet-header> 
+   <planet-header *ngIf="showLayout && (isLoggedIn$ | async)"></planet-header> 
 </header>
 
 <section class="main-content">
    <router-outlet></router-outlet> 
 </section>
 
-  <planet-footer *ngIf="isLoggedIn$ | async"></planet-footer>  
+<planet-footer *ngIf="showLayout && (isLoggedIn$ | async)"></planet-footer>  
 

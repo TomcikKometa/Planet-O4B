@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
   private readonly storeService: StoreService = inject(StoreService);
 
   public ngOnInit(): void {
-    this.storeService.logoutUser();
     this.loginFormGroup = this.loginFormSercice.createLoginForm();
   }
 

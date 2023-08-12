@@ -1,6 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { RoutePath } from 'src/app/app-routing.module';
+import { LoginPath } from 'src/app/modules/login/login-routing.module';
 
 @Injectable({
   providedIn: 'root'

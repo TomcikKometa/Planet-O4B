@@ -20,8 +20,8 @@ export class ManageMissionContainerComponent implements OnInit, AfterViewInit {
 
   private static readonly _DISPLAYCOLUMNS: string[] = ['codename', 'missionsDate', 'status', 'budget', 'Więcej'];
 
+  private readonly dialog: MatDialog = inject(MatDialog);
   private readonly manageMissionsService: ManageMissionsService = inject(ManageMissionsService);
-  public readonly dialog: MatDialog = inject(MatDialog);
 
   public ngOnInit(): any {
     this.manageMissionsService.getMisisionsData().subscribe((missions: any) => {
@@ -84,7 +84,7 @@ export class ManageMissionContainerComponent implements OnInit, AfterViewInit {
   public addMission(): void {
     this.dialog.open(AddMissisionDialogComponent, {
       width: '50vw',
-      position: { top: '2vw', left: '25vw' }
+      position: { top: '5vw', left: '25vw' }
     });
   }
 }

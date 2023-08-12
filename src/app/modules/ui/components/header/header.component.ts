@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
+import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
 
-import { NavigationService } from '../../core/services/navigation/navigation.service';
+
 
 @Component({
   selector: 'planet-header',
