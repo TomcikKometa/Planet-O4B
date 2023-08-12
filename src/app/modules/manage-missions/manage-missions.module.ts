@@ -19,7 +19,6 @@ import { MatTableModule } from '@angular/material/table';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 import { ShareModule } from '../share/share.module';
-import { SideNavButtonComponent } from '../share/side-nav-button/side-nav-button.component';
 import { AddMissisionDialogComponent } from './components/add-missision-dialog/add-missision-dialog.component';
 import { MissionsListComponent } from './components/missions-list/missions-list.component';
 import { ManageMissionContainerComponent } from './containers/manage-mission/manage-mission-container.component';
@@ -38,8 +37,6 @@ const containers: Type<unknown>[] = [ManageMissionContainerComponent];
     MatProgressSpinnerModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule,
-    MatDividerModule,
     MatDialogModule,
     MatIconModule,
     MatMenuModule,

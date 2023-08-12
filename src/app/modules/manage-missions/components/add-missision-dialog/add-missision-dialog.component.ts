@@ -1,6 +1,5 @@
-import { AfterViewChecked, AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { DateAdapter } from '@angular/material/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { CurrencyMaskConfig } from 'ng2-currency-mask';
 import { first } from 'rxjs';
@@ -20,13 +19,12 @@ import {
   styleUrls: ['./add-missision-dialog.component.scss'],
   providers: [MatDialogMissionFormService]
 })
-export class AddMissisionDialogComponent implements OnInit, AfterViewChecked {
+export class AddMissisionDialogComponent implements OnInit{
   public missionFormGroup!: FormGroup;
   public missionFormControlsName: typeof MatDialogMissionFormControlsName = MatDialogMissionFormControlsName;
-  value: any;
-  date: Date = new Date();
-  public changedViewDialog: boolean = false;
+  public date: Date = new Date();
   public missionName: string = '';
+  public changedViewDialog: boolean = false;
 
   public statuses: any[] = [
     { type: 'Przyszła', value: '1' },
@@ -34,20 +32,13 @@ export class AddMissisionDialogComponent implements OnInit, AfterViewChecked {
     { type: 'Zrealizowana', value: '-1' }
   ];
 
-  constructor(
-    private readonly dateAdapter: DateAdapter<Date>,
-    private readonly dialogRef: MatDialogRef<AddMissisionDialogComponent>,
-    private readonly prepareMissionForm: MatDialogMissionFormService,
-    private readonly manageMissionsService: ManageMissionsService,
-    private readonly navigationService: NavigationService,
-  ) {
-    this.dateAdapter.setLocale('pl');
-    this.dateAdapter.format(this.date, 'DD-MM-YYYY');
-    this.value = this.date.toString();
-  }
+  private readonly dialogRef: MatDialogRef<AddMissisionDialogComponent> = inject(MatDialogRef);
+  private readonly prepareMissionForm: MatDialogMissionFormService = inject(MatDialogMissionFormService);
+  private readonly navigationService: NavigationService = inject(NavigationService);
+  private readonly manageMissionsService: ManageMissionsService = inject(ManageMissionsService);
 
-  ngOnInit(): void {
-    this.missionFormGroup = this.prepareMissionForm.createLoginForm();
+  public ngOnInit(): void {
+    this.missionFormGroup = this.prepareMissionForm.createMissionForm();
   }
 
   public close(): void {
@@ -61,8 +52,7 @@ export class AddMissisionDialogComponent implements OnInit, AfterViewChecked {
         .postMission(this.createMissionRequest())
         .pipe(first())
         .subscribe({
-          next: () => this.changedViewDialog = true,
-          error: (e) => this.changedViewDialog = true,
+          next: () => (this.changedViewDialog = true),
         });
     }
   }
@@ -75,18 +65,9 @@ export class AddMissisionDialogComponent implements OnInit, AfterViewChecked {
       status: this.missionFormGroup.get(this.missionFormControlsName.STATUS)?.value
     };
   }
-  ngAfterViewChecked(): void {
-    if (this.changedViewDialog) {
-      this.changeViewMatDialog();
-    }
-  }
 
   protected get currencyConfig(): CurrencyMaskConfig {
     return CURRENCY_CONFIG;
-  }
-
-  private changeViewMatDialog(): void {
-    this.dialogRef.updateSize('50vw');
   }
 
   public navigateToDashboard(): void {

@@ -2,6 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { RoutePath } from 'src/app/app-routing.module';
+import { LoginPath } from 'src/app/modules/login/login-routing.module';
 
 import { StoreService } from '../../services/store/store.service';
 

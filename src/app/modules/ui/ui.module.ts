@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, Type } from '@angular/core';
 
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 import { UiRoutingModule } from './ui-routing.module';
 
 const components: Type<unknown>[] = [FooterComponent, HeaderComponent];
