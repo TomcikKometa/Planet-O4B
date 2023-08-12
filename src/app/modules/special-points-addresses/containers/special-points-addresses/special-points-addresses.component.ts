@@ -3,8 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { SpecialPointsService } from 'src/app/modules/api/services/special-points.service';
 import { SideNavButtonComponent } from 'src/app/modules/share/side-nav-button/side-nav-button.component';
 
-import { SpecialAddressesMatDialogComponent } from '../../components/special-addresses-mat-dialog/special-addresses-mat-dialog.component';
-
 @Component({
   selector: 'planet-special-points-addresses',
   templateUrl: './special-points-addresses.component.html',
@@ -28,10 +26,10 @@ export class SpecialPointsAddressesComponent implements OnInit{
     this.activeIndex = index;
   }
 
-  public addMissionAddress(): void {
-    this.dialog.open(SpecialAddressesMatDialogComponent, {
-      width: '50vw',
-      position: { top: '2vw', left: '25vw' }
-    });
-  }
+  // public addMissionAddress(): void {
+  //   this.dialog.open(SpecialAddressesMatDialogComponent, {
+  //     width: '50vw',
+  //     position: { top: '2vw', left: '25vw' }
+  //   });
+  // }
 }
