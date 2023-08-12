@@ -7,12 +7,12 @@ import { first } from 'rxjs';
 import { CURRENCY_CONFIG } from 'src/app/modules/api/config/app-config';
 import { MissisonRequest } from 'src/app/modules/api/model/misison-request';
 import { ManageMissionsService } from 'src/app/modules/api/services/manage-missions/manage-missions.service';
+import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
 
 import {
   MatDialogMissionFormControlsName,
   MatDialogMissionFormService
 } from '../mat-dialog-mission-form/mat-dialog-mission-form.service';
-import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
 
 @Component({
   selector: 'planet-add-missision-dialog',
@@ -48,7 +48,6 @@ export class AddMissisionDialogComponent implements OnInit, AfterViewChecked {
 
   ngOnInit(): void {
     this.missionFormGroup = this.prepareMissionForm.createLoginForm();
-    console.log(this.date);
   }
 
   public close(): void {

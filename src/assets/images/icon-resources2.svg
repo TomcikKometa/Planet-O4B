@@ -1,0 +1,9 @@
+<svg id="icon-resources" xmlns="http://www.w3.org/2000/svg" width="50" height="36" viewBox="0 0 50 36">
+  <rect id="Rectangle_5453" data-name="Rectangle 5453" width="50" height="36" fill="none"/>
+  <g id="point-of-interest_icon-icons.com_71383" transform="translate(9 2)">
+    <g id="Group_27891" data-name="Group 27891">
+      <path id="Path_258794" data-name="Path 258794" d="M26,3C23.252,3,20.5.491,16.982.837A.931.931,0,0,0,16,0a.979.979,0,0,0-1,1V25a1,1,0,0,0,2,0V14.836C20.51,14.5,23.256,17,26,17a12.677,12.677,0,0,0,6-2V1A12.677,12.677,0,0,1,26,3Z" fill="#274daa"/>
+      <path id="Path_258795" data-name="Path 258795" d="M19,22.049v1.034c6.289.344,11,1.742,11,3.417,0,1.934-6.27,3.5-14,3.5S2,28.434,2,26.5c0-1.675,4.711-3.074,11-3.417V22.049c-7.4.441-13,2.479-13,4.93C0,29.752,7.164,32,16,32s16-2.248,16-5.021C32,24.527,26.4,22.49,19,22.049Z" fill="#274daa"/>
+    </g>
+  </g>
+</svg>
