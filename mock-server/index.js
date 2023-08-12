@@ -62,3 +62,51 @@ app.get("/missions-data-table", (req, res) => {
     },
   ]);
 });
+
+app.get("/addresses-special-points", (req, res) => {
+  res.send([
+    {
+      codename: "Adres główny",
+      missionsDate: "Mój dom",
+      status: "ul.Przyjazna 5/10 , 00-200 Arrakis",
+    },
+    {
+      codename: "Adres punktu teleportacji",
+      missionsDate: "Adres punktu teleportacji 1",
+      status: "ul.Przyjazna 5/10 , 12-300 Kaladan",
+      budget: "100",
+    },
+    {
+      codename: "Adres punktu teleportacji",
+      missionsDate: "Adres punktu teleportacji 2",
+      status: "ul.Przyjazna 5/10 , 12-300 Kaitain",
+      budget: "50",
+    },
+    {
+      codename: "Inny adres",
+      missionsDate: "Inny adres 1 ",
+      status: "ul.Przyjazna 5/10 , 12-300 Wallach",
+      budget: "100",
+    },
+    {
+      codename: "Adres główny",
+      missionsDate: "Mój dom",
+      status: "ul.Przyjazna 5/10 , 00-200 Arrakis",
+    },
+    {
+      codename: "Adres punktu teleportacji",
+      missionsDate: "Adres punktu teleportacji 1",
+      status: "ul.Przyjazna 5/10 , 12-300 Kaladan",
+      budget: "100",
+    },
+    {
+      codename: "Adres punktu teleportacji",
+      missionsDate: "Adres punktu teleportacji 2",
+      status: "ul.Przyjazna 5/10 , 12-300 Kaitain",
+      budget: "50",
+    },
+  ]);
+});
+
+// 
+// 'addresses-special-points

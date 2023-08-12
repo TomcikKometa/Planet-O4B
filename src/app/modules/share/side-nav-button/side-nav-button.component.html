@@ -1,6 +1,8 @@
-<div class="sideNavButton" [ngClass]="{ active: active }" (click)="emitIndex.next(index)">
-  <img src="{{ image }}" />
-  <span>
-    {{ label }}
-  </span>
+<div class="sideNavButton row" [ngClass]="{ active: active }" (click)="emitIndex.next(index)">
+  <div class="row align-content-center">
+    <img src="{{ image }}" />
+    <span class="ml-2 pt-1">
+      {{ label }}
+    </span>
+  </div>
 </div>
