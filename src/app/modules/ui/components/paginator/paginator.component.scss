@@ -1,3 +1,15 @@
 .numer-of-items-label {
     text-align: center;
 }
+
+.page-numbers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px
+}
+
+.arrow{
+    cursor: pointer;
+    color: var(--unnamed-color-274daa);
+}

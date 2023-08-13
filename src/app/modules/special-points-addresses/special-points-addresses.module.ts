@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
+import {MatSortModule} from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
 import { ShareModule } from '../share/share.module';
@@ -41,7 +42,8 @@ const containers: Type<unknown>[] = [SpecialPointsAddressesComponent];
     MatFormFieldModule,
     MatInputModule,
     UiModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatSortModule
   ],
   providers: [
     {

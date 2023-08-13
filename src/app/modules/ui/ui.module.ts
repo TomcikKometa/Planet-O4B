@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule, Type } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 
 import { FooterComponent } from './components/footer/footer.component';
@@ -15,7 +16,7 @@ const moduleComponents: Type<unknown>[] = [PaginatorPageNumberComponent];
 
 @NgModule({
   declarations: [...exportedComponents, ...moduleComponents],
-  imports: [CommonModule, UiRoutingModule, MatFormFieldModule, MatSelectModule, FormsModule],
+  imports: [CommonModule, UiRoutingModule, MatFormFieldModule, MatSelectModule, FormsModule, MatIconModule],
   exports: [...exportedComponents]
 })
 export class UiModule {}
