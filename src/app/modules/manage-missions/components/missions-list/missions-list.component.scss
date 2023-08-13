@@ -22,7 +22,6 @@
   background-color: #dde8f9;
   border-radius: 10px 0px 0px 10px;
   z-index: 1;
-  padding-top: 1.75rem;
   padding-right: 1.5rem;
   font-size: 16px;
   padding-left: 3rem;
@@ -52,8 +51,8 @@
 
 .table-row-setting-left {
   color: black;
-  height: 7.4rem;
-  padding-top: 2.7rem;
+  height: 91px;
+  font-size: 16px;
   border-bottom: 1px solid;
   border-bottom-color: #dde8f9;
   font-family: 'Open Sans';
@@ -69,7 +68,7 @@
   font-size: 16px;
   padding: 1rem;
   text-align: center;
-  height: 7rem;
+  height: 90px;
 }
 
 ::ng-deep .table-button {
@@ -81,7 +80,7 @@
   font-size: 16px;
   text-align: center;
   align-items: center;
-  height: 60%;
+  height: 50px;
   width: 150px;
   font-family: 'Open Sans';
 }
