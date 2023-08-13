@@ -22,8 +22,6 @@ export class LoginComponent implements OnInit {
   private readonly loginFormSercice: LoginFormService = inject(LoginFormService);
   private readonly loginService: LoginService = inject(LoginService);
   private readonly navigationService: NavigationService = inject(NavigationService);
-  private readonly toastrService: ToastrService = inject(ToastrService);
-  private readonly storeService: StoreService = inject(StoreService);
 
   public ngOnInit(): void {
     this.loginFormGroup = this.loginFormSercice.createLoginForm();

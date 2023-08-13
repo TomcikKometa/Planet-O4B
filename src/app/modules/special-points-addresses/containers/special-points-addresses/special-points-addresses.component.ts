@@ -30,8 +30,9 @@ export class SpecialPointsAddressesComponent implements OnInit{
 
   public addMissionAddress(): void {
     this.dialog.open(SpecialPointsAdressesMatDialogComponent, {
-      width: '50vw',
-      position: { top: '5vw', left: '25vw' }
+      width: '42vw',
+      position: { top: '5vw', left: '25vw' },
+      autoFocus: false
     });
   }
 }

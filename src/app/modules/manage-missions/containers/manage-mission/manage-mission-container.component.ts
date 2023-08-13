@@ -10,7 +10,7 @@ import { AddMissisionDialogComponent } from '../../components/add-missision-dial
   templateUrl: './manage-mission-container.component.html',
   styleUrls: ['./manage-mission-container.component.scss']
 })
-export class ManageMissionContainerComponent implements OnInit, AfterViewInit {
+export class ManageMissionContainerComponent implements OnInit{
   public blankMissinData = true;
   public showMissions = false;
   public isSpinner = false;
@@ -57,29 +57,24 @@ export class ManageMissionContainerComponent implements OnInit, AfterViewInit {
       return;
     }
 
-    this.missions.sort((a: any, b: any) => {
-      const isAsc = sort.direction === 'asc';
-      switch (sort.active) {
-        case 'codename':
-          return this.compare(a.codename, b.codename, isAsc);
-        case 'missionsDate':
-          return this.compare(a.missionsDate, b.missionsDate, isAsc);
-        case 'status':
-          return this.compare(a.status, b.status, isAsc);
-        case 'budget':
-          return this.compare(a.budget, b.budget, isAsc);
-        default:
-          return 0;
-      }
-    });
+    // this.missions.sort((a: any, b: any) => {
+    //   const isAsc = sort.direction === 'asc';
+    //   switch (sort.active) {
+    //     case 'codename':
+    //       return this.compareString(a.codename, b.codename, isAsc);
+    //     case 'missionsDate':
+    //       return this.compareDate(a.missionsDate, b.missionsDate, isAsc);
+    //     case 'status':
+    //       return this.compareString(a.status, b.status, isAsc);
+    //     case 'budget':
+    //       return this.compareNumber(a.budget, b.budget, isAsc);
+    //     default:
+    //       return 0;
+    //   }
+    // });
   }
-  private compare(a: number | string, b: number | string, isAsc: boolean): any {
-    return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
-  }
+ 
 
-  ngAfterViewInit(): void {
-    this.missions;
-  }
 
   public addMission(): void {
     this.dialog.open(AddMissisionDialogComponent, {
