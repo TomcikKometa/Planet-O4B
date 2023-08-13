@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SpecialPointsFormMatDialogService {
 
-  private static readonly POSTAL_CODE_PATTERN : string = '^[0-9]{5}(?:-[0-9]{4})?$';
+  private static readonly POSTAL_CODE_PATTERN : string = '^[0-9]{2}-[0-9]{3}';
 
   private readonly formBuilder: FormBuilder = inject(FormBuilder);
 
