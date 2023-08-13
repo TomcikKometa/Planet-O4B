@@ -1,14 +1,12 @@
-import { compileNgModule } from '@angular/compiler';
-import { AfterViewChecked, AfterViewInit, Component, inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { AbstractControl, FormGroup, Validators } from '@angular/forms';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { AbstractControl, FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Subject, takeUntil } from 'rxjs';
 
 import {
   SpecialPointsAddressesFormControlsName as SpecialPointsControlsName,
   SpecialPointsFormMatDialogService
-} from '../special-points-addresses/special-points-form-mat-dialog.service';
-import { MatSelect } from '@angular/material/select';
+} from '../../special-points-form-service/special-points-form-mat-dialog.service';
 
 interface SpecialaddressesMatSelect {
   type: string;
