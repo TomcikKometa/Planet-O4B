@@ -7,8 +7,8 @@
   matSortDirection="desc"
 >
   <ng-container matColumnDef="codename">
-    <div mat-header-cell mat-sort-header *matHeaderCellDef class="table-heading-setting-left">Kryptonim misji</div>
-    <div class="table-row-setting-left" mat-cell *matCellDef="let mission">{{ mission.codename }}</div>
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-heading-setting-left">Kryptonim misji</th>
+    <td class="table-row-setting-left" mat-cell *matCellDef="let mission">{{ mission.codename }}</td>
   </ng-container>
 
   <ng-container matColumnDef="missionsDate">
