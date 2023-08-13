@@ -27,13 +27,13 @@ export class MissionsListComponent implements AfterViewInit {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
         case 'codename':
-          return this.compare(a.codename, b.codename, isAsc);
+          return this.compareString(a.codename, b.codename, isAsc);
         case 'missionsDate':
-          return this.compare(a.missionsDate, b.missionsDate, isAsc);
+          return this.compareDate(a.missionsDate, b.missionsDate, isAsc);
         case 'status':
-          return this.compare(a.status, b.status, isAsc);
+          return this.compareString(a.status, b.status, isAsc);
         case 'budget':
-          return this.compare(a.budget, b.budget, isAsc);
+          return this.compareNumber(Number(a.budget), Number(b.budget), isAsc);
         default:
           return 0;
       }
@@ -41,11 +41,40 @@ export class MissionsListComponent implements AfterViewInit {
     this.table.renderRows();
   }
 
-  private compare(a: number | string, b: number | string, isAsc: boolean): any {
-    return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
-  }
-
   public get displayColumns(): string[] {
     return MissionsListComponent._DISPLAYCOLUMNS;
+  }
+
+  private compareNumber(a: number, b: number, isAsc: boolean): number {
+    if (isAsc) {
+      return a > b ? 1 : -1;
+    } else {
+      return a > b ? -1 : 1;
+    }
+  }
+
+  private compareString(a: string, b: string, isAsc: boolean): number {
+    return a.localeCompare(b, 'pl-PL') * (isAsc ? 1 : -1);
+  }
+
+  private compareDate (a:string, b:string, isAsc:boolean): number{
+
+    const parametersStart = a.split('.');
+    const dayStart = parametersStart[0];
+    const monthStart = parametersStart[1];
+    const yearStart = parametersStart[2];
+    const aDate = new Date(+yearStart, +monthStart - 1, +dayStart);
+   
+    const parametersEnd= b.split('.');
+    const dayEnd = parametersEnd[0];
+    const monthEnd = parametersEnd[1];
+    const yearEnd = parametersEnd[2];
+    const bDate = new Date(+yearEnd, +monthEnd - 1, +dayEnd);
+
+    if (isAsc) {
+      return aDate > bDate ? 1 : -1;
+    } else {
+      return aDate > bDate ? -1 : 1;
+    }
   }
 }

@@ -7,15 +7,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 
 import { ShareModule } from '../share/share.module';
+import { UiModule } from '../ui/ui.module';
 import { SpecialPointsAdressesMatDialogComponent } from './components/special-points-adresses-mat-dialog/special-points-adresses-mat-dialog.component';
 import { SpecialPointsTableListComponent } from './components/special-points-table-list/special-points-table-list.component';
 import { SpecialPointsAddressesComponent } from './containers/special-points-addresses/special-points-addresses.component';
 import { SpecialPointsAddressesRoutingModule } from './special-points-addresses-routing.module';
-import { UiModule } from '../ui/ui.module';
+
 
 const components: Type<unknown>[] = [
   SpecialPointsTableListComponent,
@@ -38,13 +40,14 @@ const containers: Type<unknown>[] = [SpecialPointsAddressesComponent];
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    UiModule
+    UiModule,
+    MatProgressBarModule
   ],
   providers: [
     {
       provide: MatDialogRef,
       useValue: {}
-    }
+    },
   ]
 })
 export class SpecialPointsAddressesModule {}

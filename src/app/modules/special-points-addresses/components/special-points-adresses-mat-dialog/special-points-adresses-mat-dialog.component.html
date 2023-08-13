@@ -1,97 +1,86 @@
 <div class="settingPage">
-  <div *ngIf="!changedViewDialog">
-    <h2 class="mat-dialog-heading">Dodawanie misji</h2>
-    <span>Wprowadź dane.</span>
-    <form [formGroup]="specialAddressesFormGroup" class="mt-4 tomek">
-      <div class="row">
-        <div class="col-6">
-          <mat-form-field>
-            <mat-label>Wybierz typ adresu</mat-label>
-            <mat-select formControlName="{{ specialPointsFormControlsName.TYPE_ADDRESS}}" value="status.value">
-              <mat-option *ngFor="let address of addresses" value="{{ address.value }}"> {{ address.type }} </mat-option>
-            </mat-select>
-            <input matInput type="text" formControlName="{{ specialPointsFormControlsName.TYPE_ADDRESS }}" />
-          </mat-form-field>
-        </div>
-        <div class="col-6">
-          <mat-form-field class="">
-            <mat-label>Planeta</mat-label>
-            <input matInput type="text" class="input" formControlName="{{ specialPointsFormControlsName.PLANET }}" />
-          </mat-form-field>
-        </div>
-        <div class="col-6">
-          <mat-form-field class="">
-            <mat-label>Kod pocztowy</mat-label>
-            <input
-              matInput
-              type="string"
-              formControlName="{{ specialPointsFormControlsName.POSTAL_CODE }}"
-            />
-          </mat-form-field>
+  <div class="container">
+    <div class="row d-flex">
+      <div class="settingUserPart col-2 d-flex justify-content-center row">
+        <div><img class="img" src="../../../../assets/images/Intersection 3.png" alt=""></div>
+        <div class="userfont"><span class="userfont">Agent specjalny 008</span></div>
+      </div>
+      <div class="settingFormPart col-10">
+        <div *ngIf="!changedViewDialog">
+          <h2 class="mat-dialog-heading">Dodaj adres specjalny</h2>
+          <span>Wprowadź dane.</span>
+          <div class="mt-5" style="position: relative">
+            <span class="fraction" [ngStyle]="{'left': (progress) + '%'}"
+              >{{progress}}%</span
+            >
+          </div>
+          <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+          <form [formGroup]="specialAddressesFormGroup" class="mt-4 tomek">
+            <div class="row">
+              <mat-form-field class="col-12">
+                <mat-label>Wybierz typ adresu</mat-label>
+                <mat-select formControlName="{{ specialPointsControlsName.TYPE_ADDRESS }}" value="status.value">
+                  <mat-option *ngFor="let address of addresses" value="{{ address.value }}">
+                    {{ address.type }}
+                  </mat-option>
+                </mat-select>
+                <input matInput type="text" formControlName="{{ specialPointsControlsName.TYPE_ADDRESS }}" />
+              </mat-form-field>
+            </div>
+            <div class="row">
+              <mat-form-field class="col-6">
+                <mat-label>Planeta</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  class="input"
+                  formControlName="{{ specialPointsControlsName.PLANET }}"
+                />
+              </mat-form-field>
+              <mat-form-field class="col-6">
+                <mat-label>Kod pocztowy</mat-label>
+                <input matInput type="string" formControlName="{{ specialPointsControlsName.POSTAL_CODE }}" />
+              </mat-form-field>
+            </div>
+            <div class="row">
+              <mat-form-field class="col-6">
+                <mat-label>Miejscowość</mat-label>
+                <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.CITY }}" />
+              </mat-form-field>
+              <mat-form-field class="col-6">
+                <mat-label>Ulica</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  class="input"
+                  formControlName="{{ specialPointsControlsName.STREET }}"
+                />
+              </mat-form-field>
+            </div>
+            <div class="row">
+              <mat-form-field class="col-6">
+                <mat-label>Numer budynku</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  class="input"
+                  formControlName="{{ specialPointsControlsName.BUILDING_NUMBER }}"
+                />
+              </mat-form-field>
+              <mat-form-field class="col-6">
+                <mat-label>Numer lokalu</mat-label>
+                <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.ROOM }}" />
+              </mat-form-field>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="row">
-        <div class="mat-form-budget col-5">
-          <mat-form-field>
-            <mat-label>Miejscowość</mat-label>
-            <input
-              matInput
-              type="text"
-              class="input"
-              formControlName="{{ specialPointsFormControlsName.CITY }}"
-            />
-          </mat-form-field>
-        </div>
-        <div class="col-1 currency"><span>zł</span></div>
-      </div>
-      <div class="row">
-        <div class="mat-form-budget col-5">
-          <mat-form-field>
-            <mat-label>Ulica</mat-label>
-            <input
-              matInput
-              type="text"
-              class="input"
-              formControlName="{{ specialPointsFormControlsName.STREET }}"
-            />
-          </mat-form-field>
-        </div>
-        <div class="col-1 currency"><span>zł</span></div>
-      </div>
-      <div class="row">
-        <div class="mat-form-budget col-5">
-          <mat-form-field>
-            <mat-label>Numer budynku</mat-label>
-            <input
-              matInput
-              type="text"
-              class="input"
-              formControlName="{{ specialPointsFormControlsName.BUILDING_NUMBER }}"
-            />
-          </mat-form-field>
-        </div>
-        <div class="col-1 currency"><span>zł</span></div>
-      </div>
-      <div class="row">
-        <div class="mat-form-budget col-5">
-          <mat-form-field>
-            <mat-label>Numer lokalu</mat-label>
-            <input
-              matInput
-              type="text"
-              class="input"
-              formControlName="{{ specialPointsFormControlsName.ROOM }}"
-            />
-          </mat-form-field>
-        </div>
-        <div class="col-1 currency"><span>zł</span></div>
-      </div>
-    </form>
+    </div>
   </div>
 </div>
-<div *ngIf="!changedViewDialog" class="color d-flex justify-content-end">
-  <button class="m-3 button buttonCancel" (click)="close()">Anuluj</button>
-  <button class="m-3 button buttonSave" (click)="saveForm()">Zapisz</button>
+<div *ngIf="!changedViewDialog" class="color d-flex justify-content-end col-12">
+  <button mat-flat-button class="m-3 button buttonCancel" (click)="close()">Anuluj</button>
+  <button mat-flat-button class="m-3 button buttonSave" (click)="saveForm()">Zapisz</button>
 </div>
 
 <div *ngIf="changedViewDialog" class="settingPage">
@@ -101,5 +90,10 @@
   </div>
 </div>
 <div *ngIf="changedViewDialog" class="color d-flex justify-content-end">
-  <button class="m-3 button buttonAterSave" (click)="close()">Zamknij</button>
+  <button mat-flat-button class="m-3" (click)="close()">Zamknij</button>
 </div>
+
+
+<!-- <span class="percentage" [ngStyle]="{'left': (progress - 1) + '%'}"
+  >{{progress}}%</span
+> -->
