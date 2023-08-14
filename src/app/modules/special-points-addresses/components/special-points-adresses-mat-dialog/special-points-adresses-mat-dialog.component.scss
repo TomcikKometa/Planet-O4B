@@ -1,10 +1,14 @@
 .settingPage {
   margin: 1%;
+  align-content: center;
 
   .afterActions {
     font-family: 'Open Sans';
-    font-size: 24px;
+    font-size: 28px;
     color: var(--unnamed-color-274daa);
+    padding-top: 20px;
+    padding-left: 20px;
+    font-weight: 500;
   }
 }
 
@@ -47,6 +51,11 @@
 }
 
 ::ng-deep .buttonSave {
+  background-color: var(--unnamed-color-274daa) !important;
+  color: var(--unnamed-color-ffffff);
+}
+
+::ng-deep .buttonClose {
   background-color: var(--unnamed-color-274daa) !important;
   color: var(--unnamed-color-ffffff);
 }
@@ -106,9 +115,6 @@
   color: var(--unnamed-color-ffffff);
 }
 
-
-
-
 ::ng-deep .mat-select-value {
   text-align: start !important;
   padding-top: 1.2rem;
@@ -125,29 +131,26 @@
   height: 4.5rem;
 }
 
-.userfont{
-    font-family: 'Open Sans';
-    color: var(--unnamed-color-274daa);
-    font-weight: 600;
-    text-align: center;
-    margin-top: 10px;
+.userfont {
+  font-family: 'Open Sans';
+  color: var(--unnamed-color-274daa);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.fraction{
-    position: relative;
-    bottom: 1.5em;
-    font-size: 80%;
-    font-size: 15px;
-    color: var(--unnamed-color-7da6ed);
-  }
-  
-  .percentage{
-    position: relative;
-    padding: 6px 6px 6px;
-    bottom: 1em;
-    font-size: 80%;
-    color:var(--unnamed-color-7da6ed);
-  }
+.fraction {
+  position: relative;
+  bottom: 1.5em;
+  font-size: 80%;
+  font-size: 15px;
+  color: var(--unnamed-color-7da6ed);
+}
 
-
-
+.percentage {
+  position: relative;
+  padding: 6px 6px 6px;
+  bottom: 1em;
+  font-size: 80%;
+  color: var(--unnamed-color-7da6ed);
+}

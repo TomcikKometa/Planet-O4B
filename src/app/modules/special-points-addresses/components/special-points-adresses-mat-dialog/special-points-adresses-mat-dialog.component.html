@@ -1,79 +1,74 @@
 <div class="settingPage">
   <div class="container">
-    <div class="row d-flex">
-      <div class="settingUserPart col-2 d-flex justify-content-center row">
-        <div><img class="img" src="../../../../assets/images/Intersection 3.png" alt=""></div>
+    <div class="row">
+      <div *ngIf="!changedViewDialog" class="settingUserPart col-2 d-flex justify-content-center row">
+        <div><img class="img" src="../../../../assets/images/Intersection 3.png" alt="" /></div>
         <div class="userfont"><span class="userfont">Agent specjalny 008</span></div>
       </div>
-      <div class="settingFormPart col-10">
-        <div *ngIf="!changedViewDialog">
-          <h2 class="mat-dialog-heading">Dodaj adres specjalny</h2>
-          <span>Wprowadź dane.</span>
-          <div class="mt-5" style="position: relative">
-            <span class="fraction" [ngStyle]="{'left': (progress) + '%'}"
-              >{{progress}}%</span
-            >
-          </div>
-          <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
-          <form [formGroup]="specialAddressesFormGroup" class="mt-4 tomek">
-            <div class="row">
-              <mat-form-field class="col-12">
-                <mat-label>Wybierz typ adresu</mat-label>
-                <mat-select formControlName="{{ specialPointsControlsName.TYPE_ADDRESS }}" value="status.value">
-                  <mat-option *ngFor="let address of addresses" value="{{ address.value }}">
-                    {{ address.type }}
-                  </mat-option>
-                </mat-select>
-                <input matInput type="text" formControlName="{{ specialPointsControlsName.TYPE_ADDRESS }}" />
-              </mat-form-field>
-            </div>
-            <div class="row">
-              <mat-form-field class="col-6">
-                <mat-label>Planeta</mat-label>
-                <input
-                  matInput
-                  type="text"
-                  class="input"
-                  formControlName="{{ specialPointsControlsName.PLANET }}"
-                />
-              </mat-form-field>
-              <mat-form-field class="col-6">
-                <mat-label>Kod pocztowy</mat-label>
-                <input matInput type="string" formControlName="{{ specialPointsControlsName.POSTAL_CODE }}" placeholder="00-000"/>
-              </mat-form-field>
-            </div>
-            <div class="row">
-              <mat-form-field class="col-6">
-                <mat-label>Miejscowość</mat-label>
-                <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.CITY }}" />
-              </mat-form-field>
-              <mat-form-field class="col-6">
-                <mat-label>Ulica</mat-label>
-                <input
-                  matInput
-                  type="text"
-                  class="input"
-                  formControlName="{{ specialPointsControlsName.STREET }}"
-                />
-              </mat-form-field>
-            </div>
-            <div class="row">
-              <mat-form-field class="col-6">
-                <mat-label>Numer budynku</mat-label>
-                <input
-                  matInput
-                  type="text"
-                  class="input"
-                  formControlName="{{ specialPointsControlsName.BUILDING_NUMBER }}"
-                />
-              </mat-form-field>
-              <mat-form-field class="col-6">
-                <mat-label>Numer lokalu</mat-label>
-                <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.ROOM }}" />
-              </mat-form-field>
-            </div>
-          </form>
+      <div *ngIf="changedViewDialog" class="settingPage afterActions col-10">
+        <img src="../../../../assets/images/ikon-ok.svg" />
+        <span class="ml-2">Gratulacje utworzono misję specjalną {{ specialAddressName }}.</span>
+      </div>
+      <div *ngIf="!changedViewDialog" class="settingFormPart col-10">
+        <h2 class="mat-dialog-heading">Dodaj adres specjalny</h2>
+        <span>Wprowadź dane.</span>
+        <div class="mt-5" style="position: relative">
+          <span class="fraction" [ngStyle]="{ left: progress + '%' }">{{ progress }}%</span>
         </div>
+        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+        <form [formGroup]="specialAddressesFormGroup" class="mt-4 tomek">
+          <div class="row">
+            <mat-form-field class="col-12">
+              <mat-label>Wybierz typ adresu</mat-label>
+              <mat-select formControlName="{{ specialPointsControlsName.TYPE_ADDRESS }}" value="status.value">
+                <mat-option *ngFor="let address of addresses" value="{{ address.value }}">
+                  {{ address.type }}
+                </mat-option>
+              </mat-select>
+              <input matInput type="text" formControlName="{{ specialPointsControlsName.TYPE_ADDRESS }}" />
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col-6">
+              <mat-label>Planeta</mat-label>
+              <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.PLANET }}" />
+            </mat-form-field>
+            <mat-form-field class="col-6">
+              <mat-label>Kod pocztowy</mat-label>
+              <input
+                matInput
+                type="string"
+                formControlName="{{ specialPointsControlsName.POSTAL_CODE }}"
+                placeholder="00-000"
+              />
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col-6">
+              <mat-label>Miejscowość</mat-label>
+              <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.CITY }}" />
+            </mat-form-field>
+            <mat-form-field class="col-6">
+              <mat-label>Ulica</mat-label>
+              <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.STREET }}" />
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col-6">
+              <mat-label>Numer budynku</mat-label>
+              <input
+                matInput
+                type="text"
+                class="input"
+                formControlName="{{ specialPointsControlsName.BUILDING_NUMBER }}"
+              />
+            </mat-form-field>
+            <mat-form-field class="col-6">
+              <mat-label>Numer lokalu</mat-label>
+              <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.ROOM }}" />
+            </mat-form-field>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -83,12 +78,6 @@
   <button mat-flat-button class="m-3 button buttonSave" (click)="saveForm()">Zapisz</button>
 </div>
 
-<div *ngIf="changedViewDialog" class="settingPage">
-  <div class="settingPage afterActions">
-    <img src="../../../../assets/images/ikon-ok.svg" />
-    <span class="ml-2">Gratulacje utworzono misję specjalną {{ specialAddressName }}.</span>
-  </div>
-</div>
 <div *ngIf="changedViewDialog" class="color d-flex justify-content-end">
-  <button mat-flat-button class="m-3" (click)="close()">Zamknij</button>
+  <button mat-flat-button class="button buttonClose m-3" (click)="close()">Zamknij</button>
 </div>

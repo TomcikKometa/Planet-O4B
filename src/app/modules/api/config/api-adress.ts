@@ -10,6 +10,7 @@ export enum ApiManageMissionUrl {
 
 export enum ApiSpecialPointsUrl {
     ADDRESSES_SPECIAL_POINTS = 'addresses-special-points',
+    ADD_SPECIAL_POINTS_ADDRESS = 'add-special-address'
 }
 
 
