@@ -1,7 +1,9 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { AbstractControl, FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Subject, takeUntil } from 'rxjs';
+import { first, Subject, takeUntil } from 'rxjs';
+import { SpecialPointsRequest } from 'src/app/modules/api/model/special-point-request';
+import { SpecialPointsService } from 'src/app/modules/api/services/special-points-addresses/special-points.service';
 
 import {
   SpecialPointsAddressesFormControlsName as SpecialPointsControlsName,
@@ -20,7 +22,7 @@ interface SpecialaddressesMatSelect {
   providers: [SpecialPointsFormMatDialogService]
 })
 export class SpecialPointsAdressesMatDialogComponent implements OnInit, OnDestroy {
-  public specialAddressName: string = 'Geronimo';
+  public specialAddressName: string = '';
   public changedViewDialog: boolean = false;
   public specialAddressesFormGroup!: FormGroup;
   public specialPointsControlsName: typeof SpecialPointsControlsName = SpecialPointsControlsName;
@@ -28,30 +30,30 @@ export class SpecialPointsAdressesMatDialogComponent implements OnInit, OnDestro
   public fraction: string = 'fraction';
 
   public addresses: SpecialaddressesMatSelect[] = [
-    { type: 'Adres punktu teleportacji', value: '0' },
-    { type: 'Inny adres ', value: '1' }
+    { type: 'Adres główny', value: '0' },
+    { type: 'Adres punktu teleportacji', value: '1' },
+    { type: 'Inny adres ', value: '2' }
   ];
 
   private readonly dialogRef: MatDialogRef<SpecialPointsAdressesMatDialogComponent> = inject(MatDialogRef);
   private readonly specialPointsFormMatDialogService: SpecialPointsFormMatDialogService = inject(
     SpecialPointsFormMatDialogService
   );
-  
-  private readonly _destroy: Subject<void> = new Subject<void>;
+  private readonly specialPointsService: SpecialPointsService = inject(SpecialPointsService);
+  private readonly _destroy: Subject<void> = new Subject<void>();
 
   public ngOnInit(): void {
     this.specialAddressesFormGroup = this.specialPointsFormMatDialogService.createSpecialAddressesForm();
-    
+
     this.specialAddressesFormGroup.valueChanges.pipe(takeUntil(this._destroy)).subscribe(() => {
-      const numberOfFields: AbstractControl[] = Object.values(this.specialAddressesFormGroup.controls);
       const controlCount = Object.keys(this.specialAddressesFormGroup.controls).length;
       let validCount = 0;
 
-      for( const [key, value] of Object.entries(this.specialAddressesFormGroup.controls)) {
+      for (const [key, value] of Object.entries(this.specialAddressesFormGroup.controls)) {
         if (value.valid) validCount++;
       }
 
-    this.progress = Math.round(validCount / controlCount * 100);
+      this.progress = Math.round((validCount / controlCount) * 100);
     });
   }
 
@@ -65,25 +67,36 @@ export class SpecialPointsAdressesMatDialogComponent implements OnInit, OnDestro
   }
 
   public saveForm(): void {
-    this.specialAddressName;
-  }
-
-  public manageProgress(): void {
-    if (this.progress === 100) {
-      this.progress = 0;
-    } else {
-      this.progress = this.progress + 1;
+    switch (this.specialAddressesFormGroup.get(this.specialPointsControlsName.TYPE_ADDRESS)?.value) {
+      case '0':
+        this.specialAddressName = this.addresses[0].type.toLocaleLowerCase();
+        break;
+      case '1':
+        this.specialAddressName = this.addresses[1].type.toLocaleLowerCase();
+        break;
+      case '2':
+        this.specialAddressName = this.addresses[2].type.toLocaleLowerCase();
+        break;
+    }
+    if (this.specialAddressesFormGroup.valid) {
+      this.specialPointsService
+        .postSpecialPointAddress(this.createSpecialPointRequest())
+        .pipe(first())
+        .subscribe({
+          next: () => (this.changedViewDialog = true)
+        });
     }
   }
 
-  // private createMissionRequest(): MissisonRequest {
-  //   return {
-  //     codename: this.missionFormGroup.get(this.missionFormControlsName.CODENAME)?.value,
-  //     mission_date: this.missionFormGroup.get(this.missionFormControlsName.MISSION_DATE)?.value,
-  //     budget: this.missionFormGroup.get(this.missionFormControlsName.BUDGET)?.value,
-  //     status: this.missionFormGroup.get(this.missionFormControlsName.STATUS)?.value
-  //   };
-  // }
-
- 
+  private createSpecialPointRequest(): SpecialPointsRequest {
+    return {
+      type_Address: this.specialAddressesFormGroup.get(this.specialPointsControlsName.TYPE_ADDRESS)?.value,
+      planet: this.specialAddressesFormGroup.get(this.specialPointsControlsName.PLANET)?.value,
+      city: this.specialAddressesFormGroup.get(this.specialPointsControlsName.CITY)?.value,
+      postal_code: this.specialAddressesFormGroup.get(this.specialPointsControlsName.POSTAL_CODE)?.value,
+      building_number: this.specialAddressesFormGroup.get(this.specialPointsControlsName.BUILDING_NUMBER)?.value,
+      street: this.specialAddressesFormGroup.get(this.specialPointsControlsName.STREET)?.value,
+      room: this.specialAddressesFormGroup.get(this.specialPointsControlsName.ROOM)?.value
+    };
+  }
 }

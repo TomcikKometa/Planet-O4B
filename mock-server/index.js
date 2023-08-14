@@ -15,6 +15,9 @@ app.post("/post-mission", (request, response) => {
   response.send();
 });
 
+app.post("/add-special-address", (request, response) => {
+  response.send();
+});
 
 app.get("/missions-data-table", (req, res) => {
   res.send([
