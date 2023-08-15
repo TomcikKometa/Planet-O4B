@@ -1,12 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { PageRequestOptions } from 'src/app/modules/api/model/page/page-request-options';
 import { SpecialPointsTableDataResponse } from 'src/app/modules/api/model/special-point/special-points-table-data-response';
 import { SpecialPointsService } from 'src/app/modules/api/services/special-points-addresses/special-points.service';
 import { SideNavButtonComponent } from 'src/app/modules/share/side-nav-button/side-nav-button.component';
+import { PaginationOptions } from 'src/app/modules/ui/components/paginator/paginator.component';
 
 import { SpecialPointsAdressesMatDialogComponent } from '../../components/special-points-adresses-mat-dialog/special-points-adresses-mat-dialog.component';
-import { PaginationOptions } from 'src/app/modules/ui/components/paginator/paginator.component';
-import { PageRequestOptions } from 'src/app/modules/api/model/page/page-request-options';
 
 @Component({
   selector: 'planet-special-points-addresses',

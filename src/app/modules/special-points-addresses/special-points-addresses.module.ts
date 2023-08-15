@@ -11,6 +11,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import {MatSortModule} from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { ShareModule } from '../share/share.module';
 import { UiModule } from '../ui/ui.module';
@@ -18,7 +19,6 @@ import { SpecialPointsAdressesMatDialogComponent } from './components/special-po
 import { SpecialPointsTableListComponent } from './components/special-points-table-list/special-points-table-list.component';
 import { SpecialPointsAddressesComponent } from './containers/special-points-addresses/special-points-addresses.component';
 import { SpecialPointsAddressesRoutingModule } from './special-points-addresses-routing.module';
-import { TranslateModule } from '@ngx-translate/core';
 
 
 const components: Type<unknown>[] = [
