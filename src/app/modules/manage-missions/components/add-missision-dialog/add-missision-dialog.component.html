@@ -7,7 +7,8 @@
         <div class="col-6">
           <mat-form-field class="">
             <mat-label>Kryptonim misji</mat-label>
-            <input matInput type="text" class="input" formControlName="{{ missionFormControlsName.CODENAME }}" />
+            <input matInput type="text" class="input" placeholder="000000000-00000-00" formControlName="{{ missionFormControlsName.CODENAME }}" />
+            <mat-hint>kryptonim misji - dystrykt planety - poziom planety</mat-hint>
           </mat-form-field>
         </div>
         <div class="col-6">
@@ -16,14 +17,12 @@
             <input
               matInput
               type="date"
-              [value]="date"
-              data-date-format="DD-MM-YYYY"
               formControlName="{{ missionFormControlsName.MISSION_DATE }}"
             />
           </mat-form-field>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-2">
         <div class="mat-form-budget col-5">
           <mat-form-field>
             <mat-label>Budżet misji</mat-label>

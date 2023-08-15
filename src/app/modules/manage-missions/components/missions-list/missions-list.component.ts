@@ -1,7 +1,10 @@
-import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, inject, Input, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { MissionTableData } from 'src/app/modules/api/model/mission-table-data';
+
+import { AddMissisionDialogComponent } from '../add-missision-dialog/add-missision-dialog.component';
 
 @Component({
   selector: 'planet-missions-list',
@@ -15,6 +18,8 @@ export class MissionsListComponent implements AfterViewInit {
 
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<MissionTableData>;
+
+  private readonly dialog: MatDialog = inject(MatDialog);
 
   ngAfterViewInit(): void {
     this.sort.sortChange.subscribe((sort: Sort) => {
@@ -76,5 +81,15 @@ export class MissionsListComponent implements AfterViewInit {
     } else {
       return aDate > bDate ? -1 : 1;
     }
+  }
+
+  public addMission(x: any): void {
+    
+    this.dialog.open(AddMissisionDialogComponent, {
+      data:x,
+      width: '50vw',
+      position: { top: '5vw', left: '25vw' },
+      autoFocus: false
+    });
   }
 }

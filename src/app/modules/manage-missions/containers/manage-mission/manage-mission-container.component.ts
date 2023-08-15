@@ -56,22 +56,6 @@ export class ManageMissionContainerComponent implements OnInit{
       this.missions = data;
       return;
     }
-
-    // this.missions.sort((a: any, b: any) => {
-    //   const isAsc = sort.direction === 'asc';
-    //   switch (sort.active) {
-    //     case 'codename':
-    //       return this.compareString(a.codename, b.codename, isAsc);
-    //     case 'missionsDate':
-    //       return this.compareDate(a.missionsDate, b.missionsDate, isAsc);
-    //     case 'status':
-    //       return this.compareString(a.status, b.status, isAsc);
-    //     case 'budget':
-    //       return this.compareNumber(a.budget, b.budget, isAsc);
-    //     default:
-    //       return 0;
-    //   }
-    // });
   }
  
 
@@ -79,7 +63,8 @@ export class ManageMissionContainerComponent implements OnInit{
   public addMission(): void {
     this.dialog.open(AddMissisionDialogComponent, {
       width: '50vw',
-      position: { top: '5vw', left: '25vw' }
+      position: { top: '5vw', left: '25vw' },
+      autoFocus: false
     });
   }
 }
