@@ -1,10 +1,10 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
 
 import { LanguagePopUpComponent } from '../language-pop-up/language-pop-up.component';
 import { LogoutPopUpComponent } from '../logout-pop-up/logout-pop-up.component';
-import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'planet-header',
@@ -18,7 +18,6 @@ export class HeaderComponent {
   private readonly navigationService: NavigationService = inject(NavigationService);
   private readonly dialog: MatDialog = inject(MatDialog);
 
- 
   public navigateToMainDashboard(): void {
     this.navigationService.navigateToMainDashboard();
   }
