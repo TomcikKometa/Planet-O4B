@@ -3,7 +3,12 @@
     <div class="col-6">
       <img class="img" src="../../../../assets/images/logo-o4b.svg" (click)="navigateToMainDashboard()" />
     </div>
-    <div class="col-6 d-flex justify-content-end"><img src="../../../../assets/images/Intersection 3.png" (click)="logout()" /></div>
+    <div class="col-6 d-flex justify-content-end menuRight">
+      <div><img src="../../../../assets/images/Intersection 3.png" (click)="logout()" /></div>
+      <div>
+        <img *ngIf="isEnglishFlag | async" class="imgFlagUK" src="../../../../assets/images/englishFlag.jpg" (click)="changeLanguagePopUp()" />
+        <img  *ngIf="isPolishFlag | async" class="imgFlagPolish" src="../../../../assets/images/polishFlag.jpg" (click)="changeLanguagePopUp()" />
+      </div>
+    </div>
   </div>
- 
 </div>

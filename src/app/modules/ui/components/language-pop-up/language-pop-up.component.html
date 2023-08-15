@@ -1,0 +1,15 @@
+<div class="settingPage">
+  <ng-container class="row checkbox col-2">
+    <mat-radio-group color="primary">
+      <mat-radio-button
+        *ngFor="let lang of languages"
+        class="radioCheckbox"
+        (click)="changeLanguage(lang.value)"
+        value="{{ lang.value }}"
+        [checked]="lang.checked"
+      >
+        {{ lang.language }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </ng-container>
+</div>
