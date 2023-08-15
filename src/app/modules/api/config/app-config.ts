@@ -10,3 +10,7 @@ export const CURRENCY_CONFIG: CurrencyMaskConfig = {
   suffix: '',
   thousands: ' ',
 };
+
+export const APP_LANGUAGES: string[] = ['pl', 'en', 'de', 'ua'];
+export const APP_DEFAULT_LANG: string = 'pl';
+export const APP_USER_LANG : string = 'pl';

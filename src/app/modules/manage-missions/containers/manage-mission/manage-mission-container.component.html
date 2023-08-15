@@ -2,7 +2,7 @@
   <div class="row hiro">
     <section class="setNav">
       <planet-side-nav-button
-        [label]="'Wszystkie misje'"
+        [label]="'manage_mission.side_navigation.all_missions' | translate "
         [image]="'../../../../assets/images/icon-resources.svg'"
         [active]="activeIndex === 0"
         [index]="0"
@@ -10,7 +10,7 @@
       ></planet-side-nav-button>
 
       <planet-side-nav-button
-        [label]="'Tajne misje'"
+        [label]="'manage_mission.side_navigation.secret_missions' | translate"
         [image]="'../../../../assets/images/icon-configuration.svg'"
         [active]="activeIndex === 1"
         [index]="1"
@@ -18,7 +18,7 @@
       ></planet-side-nav-button>
 
       <planet-side-nav-button
-        [label]="'Specjalne misje'"
+        [label]="'manage_mission.side_navigation.special_missions' | translate"
         [image]="'../../../../assets/images/icon-translation.svg'"
         [active]="activeIndex === 2"
         [index]="2"

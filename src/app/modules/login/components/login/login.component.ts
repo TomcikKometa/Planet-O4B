@@ -1,11 +1,9 @@
 import { Component, DoCheck, inject, OnInit, SimpleChange } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
 import { first } from 'rxjs';
 import { LoginRequest } from 'src/app/modules/api/model/login-request';
 import { LoginService } from 'src/app/modules/api/services/login/login.service';
 import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
-import { StoreService } from 'src/app/modules/core/services/store/store.service';
 
 import { LoginFormControlsName, LoginFormService } from '../../form-service/login-form.service';
 
@@ -13,7 +11,7 @@ import { LoginFormControlsName, LoginFormService } from '../../form-service/logi
   selector: 'planet-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  providers: [LoginFormService, ToastrService]
+  providers: [LoginFormService]
 })
 export class LoginComponent implements OnInit {
   public loginFormGroup!: FormGroup;
