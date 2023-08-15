@@ -24,19 +24,19 @@ app.get("/missions-data-table", (req, res) => {
     {
       codename: "Peking",
       missionsDate: "16.08.2023",
-      status: "W trakcie",
+      status: "1",
       budget: "100",
     },
     {
       codename: "Dynamo",
       missionsDate: "24.12.2023",
-      status: "W trakcie",
+      status: "-1",
       budget: "100",
     },
     {
       codename: "Foo",
       missionsDate: "01.01.2024",
-      status: "W trakcie",
+      status: "0",
       budget: "50",
     },
     {
@@ -67,7 +67,8 @@ app.get("/missions-data-table", (req, res) => {
 });
 
 app.get("/addresses-special-points", (req, res) => {
-  res.send([
+  res.send({
+    data: [
     {
       codename: "Adres główny",
       missionsDate: "Mój dom",
@@ -108,7 +109,10 @@ app.get("/addresses-special-points", (req, res) => {
       status: "ul.Przyjazna 5/10 , 12-300 Kaitain",
       budget: "50",
     },
-  ]);
+  ],
+  numberOfPages: 7,
+  currentPage: 2
+  });
 });
 
 app.listen(port, () => {
