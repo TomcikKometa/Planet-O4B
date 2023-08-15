@@ -23,7 +23,7 @@
 
 .box-section {
   padding-left: 5rem;
-  padding-top: 4rem;
+  padding-top: 20px;
   width: 60%;
 }
 
@@ -31,10 +31,10 @@
   font-family: 'Open Sans';
   color: #274daa; 
   font-weight: 600; 
-  font-size: 46px
+  font-size: 42px;
 }
 
-.mat-flat-button {
+::ng-deep .mat-flat-button {
   color: #f0fff3;
   background-color: #274daa;
   width: 160px;
