@@ -46,7 +46,6 @@ export class AddMissisionDialogComponent implements OnInit {
     if(this.data){
       this.missionFormGroup = this.prepareMissionForm.createMissionForm(this.data);
     }
-   
   }
 
   public close(): void {

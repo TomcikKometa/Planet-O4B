@@ -13,19 +13,29 @@
     },
     "modules": "Modules",
     "mat-grid-card": {
-      "manage_missions": "Manage missions",
+      "manage_missions": "Manage missions.",
       "special_points_addresses": "Special points addresses",
       "teleportaion": "Telportation",
       "export-import": "Export / import"
     }
   },
   "manage_mission": {
-    "header": "Zarządzanie misjami",
-    "header_text": "Znajdziesz tutaj swoje misje specjalne",
+    "header": "Manage missions",
+    "header_text": "You can find here yours special missions",
+    "card_heading":"Its empty here, but only for a while!",
     "side_navigation": {
       "all_missions": "All missions",
       "secret_missions": "Secret missions",
       "special_missions": "Special missions"
+    },
+    "missions_data_table":{
+      "mission_codename":"Mission codename",
+      "mission_date":"Mission date",
+      "status":"Status",
+      "budget":"Budget",
+      "more":"More",
+      "mat_menu_edition":"Edition",
+      "mat_menu_pdf":"Under construction"
     }
   },
   "button": {
@@ -34,6 +44,11 @@
       "check_missions": "Check missions",
       "see_more": "See more",
       "go_forward": "Go"
+    },
+    "manage_mission": {
+      "see_more": "See details",
+      "add_mission":"Add mission",
+      "load_mission":"Load mission"
     }
   }
 }
