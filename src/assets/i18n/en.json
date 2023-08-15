@@ -1,0 +1,39 @@
+{
+  "login": {
+    "logged_in": "Logged in as:"
+  },
+  "main_dashboard": {
+    "header": "Welcom!",
+    "header_text_up": "You are the agent for special tasks on the O4B green planet.",
+    "header_text_down": "This is your special system for manage special missions accomplish by you and your team.Follow the white cursor.",
+    "mat_card": {
+      "special_agents": "Yours agents for special task",
+      "your_missions": "Yours missions",
+      "your_bases": "Your bases"
+    },
+    "modules": "Modules",
+    "mat-grid-card": {
+      "manage_missions": "Manage missions",
+      "special_points_addresses": "Special points addresses",
+      "teleportaion": "Telportation",
+      "export-import": "Export / import"
+    }
+  },
+  "manage_mission": {
+    "header": "Zarządzanie misjami",
+    "header_text": "Znajdziesz tutaj swoje misje specjalne",
+    "side_navigation": {
+      "all_missions": "All missions",
+      "secret_missions": "Secret missions",
+      "special_missions": "Special missions"
+    }
+  },
+  "button": {
+    "main_dashboard": {
+      "see_agents": "See agents",
+      "check_missions": "Check missions",
+      "see_more": "See more",
+      "go_forward": "Go"
+    }
+  }
+}

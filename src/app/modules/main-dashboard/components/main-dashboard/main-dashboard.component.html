@@ -1,11 +1,10 @@
 <section class="page-container">
   <section class="page-title">
-    <h1 class="welcome">Witaj!</h1>
+    <h1 class="welcome">{{ 'main_dashboard.header' | translate }}</h1>
     <span>
-      Jesteś agentem do zadań specjalnych na zielonej planecie O4B.
+      {{ 'main_dashboard.header_text_up' | translate }}
       <br />
-      To jest twój system do zarządzania misjami specjalnymi realizowanymi przez Ciebie i twój zespół. Podążaj za białym
-      kursorem.
+      {{ 'main_dashboard.header_text_down' | translate }}
     </span>
   </section>
 
@@ -20,16 +19,16 @@
         }"
       >
         <mat-card-header>
-          <mat-card-title> {{ card.cardName }} </mat-card-title>
+          <mat-card-title> {{ 'main_dashboard.mat_card.' + card.cardName | translate }} </mat-card-title>
         </mat-card-header>
         <mat-card-actions>
-          <button class="ml-4 mt-3" mat-button>{{ card.buttonName }}</button>
+          <button class="ml-4 mt-3" mat-button> {{ 'button.main_dashboard.' + card.buttonName | translate }} </button>
         </mat-card-actions>
       </mat-card>
     </div>
   </div>
 
-  <h2 class="modules title">Moduły</h2>
+  <h2 class="modules title">{{ 'main_dashboard.modules' | translate }}</h2>
 
   <mat-grid-list cols="2" rowHeight="250px" class="box">
     <mat-grid-tile *ngFor="let card of modulesCards">
@@ -42,7 +41,7 @@
         }"
       >
         <div class="mat-grid-card row justify-content-between">
-          <span>{{ card.cardName }}</span>
+          <span>{{ 'main_dashboard.mat-grid-card.' + card.cardName | translate }}</span>
           <button mat-icon-button [matMenuTriggerFor]="menu" class="mr-5">
             <mat-icon>more_vert</mat-icon>
           </button>
@@ -55,8 +54,7 @@
         </div>
         <div class="actionsCardTwo">
           <a routerLink="/{{ card.router }}" routerLinkActive="active"
-          
-            >Przejdź <mat-icon class="ml-2 actionsCardTwoarrow">arrow_forward</mat-icon></a
+            >{{ 'button.main_dashboard.go_forward' | translate }} <mat-icon class="ml-2 actionsCardTwoarrow">arrow_forward</mat-icon></a
           >
         </div>
       </div>

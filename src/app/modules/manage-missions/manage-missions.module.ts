@@ -23,6 +23,7 @@ import { AddMissisionDialogComponent } from './components/add-missision-dialog/a
 import { MissionsListComponent } from './components/missions-list/missions-list.component';
 import { ManageMissionContainerComponent } from './containers/manage-mission/manage-mission-container.component';
 import { ManageMissionsRoutingModule } from './manage-missions-routing.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 const components: Type<unknown>[] = [MissionsListComponent, AddMissisionDialogComponent];
 const containers: Type<unknown>[] = [ManageMissionContainerComponent];
@@ -47,7 +48,8 @@ const containers: Type<unknown>[] = [ManageMissionContainerComponent];
     MatFormFieldModule,
     CurrencyMaskModule,
     MatSelectModule,
-    ShareModule
+    ShareModule,
+    TranslateModule
   ]
 })
 export class ManageMissionsModule {}

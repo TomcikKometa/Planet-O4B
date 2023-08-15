@@ -1,0 +1,39 @@
+{
+  "login": {
+    "logged_in": "Zalogowany jako:"
+  },
+  "main_dashboard": {
+    "header": "Witaj!",
+    "header_text_up": "Jesteś agentem do zadań specjalnych na zielonej planecie O4B.",
+    "header_text_down": "To jest twój system do zarządzania misjami specjalnymi realizowanymi przez Ciebie i twój zespół. Podążaj za białym kursorem",
+    "mat_card": {
+      "special_agents": "Twoi agenci do zadań specjalnych",
+      "your_missions": "Twoje misje",
+      "your_bases": "Twoje bazy"
+    },
+    "modules": "Moduły",
+    "mat-grid-card": {
+      "manage_missions": "Zarządzanie misjami",
+      "special_points_addresses": "Adresy punktów specjalnych",
+      "teleportaion": "Teleportacja",
+      "export-import": "Export / import"
+    }
+  },
+  "manage_mission": {
+    "header": "Zarządzanie misjami",
+    "header_text": "Znajdziesz tutaj swoje misje specjalne",
+    "side_navigation":{
+      "all_missions": "Wszystkie misje",
+      "secret_missions":"Tajne misje",
+      "special_missions": "Specjalne misje"
+    }
+  },
+  "button": {
+    "main_dashboard": {
+      "see_agents": "Zobacz agentów",
+      "check_missions": "Sprawdż misje",
+      "see_more": "Zobacz więcej",
+      "go_forward": "Przejdż"
+    }
+  }
+}
