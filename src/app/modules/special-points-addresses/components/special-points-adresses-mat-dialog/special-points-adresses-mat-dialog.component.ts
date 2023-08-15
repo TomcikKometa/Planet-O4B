@@ -8,7 +8,7 @@ import { SpecialPointsService } from 'src/app/modules/api/services/special-point
 import {
   SpecialPointsAddressesFormControlsName as SpecialPointsControlsName,
   SpecialPointsFormMatDialogService
-} from '../../special-points-form-service/special-points-form-mat-dialog.service';
+} from '../../services/special-points-form-service/special-points-form-mat-dialog.service';
 
 interface SpecialaddressesMatSelect {
   type: string;
@@ -26,7 +26,7 @@ export class SpecialPointsAdressesMatDialogComponent implements OnInit, OnDestro
   public changedViewDialog: boolean = false;
   public specialAddressesFormGroup!: FormGroup;
   public specialPointsControlsName: typeof SpecialPointsControlsName = SpecialPointsControlsName;
-  public progress = 0;
+  public progress: number = 0;
   public fraction: string = 'fraction';
 
   public addresses: SpecialaddressesMatSelect[] = [
