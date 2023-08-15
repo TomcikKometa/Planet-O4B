@@ -1,6 +1,6 @@
 <table
   mat-table
-  [dataSource]="addresses"
+  [dataSource]="specialPointsResponse.data"
   style="width: 100%; border-radius: 10px;height: 80%;"
   matSort
   matSortActive="codename"
@@ -43,4 +43,3 @@
   <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
 </table>
-<planet-paginator class="mt-2" [numberOfPages]="3"></planet-paginator>

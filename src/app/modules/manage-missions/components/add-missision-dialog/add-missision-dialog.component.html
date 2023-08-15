@@ -40,10 +40,9 @@
         <div class="col-6">
           <mat-form-field>
             <mat-label>Status misji</mat-label>
-            <mat-select formControlName="{{ missionFormControlsName.STATUS }}" value="status.value">
+            <mat-select formControlName="{{ missionFormControlsName.STATUS }}">
               <mat-option *ngFor="let status of statuses" value="{{ status.value }}"> {{ status.type }} </mat-option>
             </mat-select>
-            <input matInput type="text" formControlName="{{ missionFormControlsName.STATUS }}" />
           </mat-form-field>
         </div>
       </div>
