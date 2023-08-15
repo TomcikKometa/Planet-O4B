@@ -22,10 +22,20 @@
   "manage_mission": {
     "header": "Zarządzanie misjami",
     "header_text": "Znajdziesz tutaj swoje misje specjalne",
+    "card_heading":"Tu jest pusto ale tylko chwilowo!",
     "side_navigation":{
       "all_missions": "Wszystkie misje",
       "secret_missions":"Tajne misje",
       "special_missions": "Specjalne misje"
+    },
+    "missions_data_table":{
+      "mission_codename":"Kryptonim misji",
+      "mission_date":"Termin misji",
+      "status":"Status",
+      "budget":"Budżet",
+      "more":"Więcej",
+      "mat_menu_edition":"Edycja",
+      "mat_menu_pdf":"W budowie"
     }
   },
   "button": {
@@ -34,6 +44,11 @@
       "check_missions": "Sprawdż misje",
       "see_more": "Zobacz więcej",
       "go_forward": "Przejdż"
+    },
+    "manage_mission": {
+      "see_more": "Zobacz szczegóły",
+      "add_mission":"Dodaj misję",
+      "load_mission":"Załaduj misję"
     }
   }
 }
