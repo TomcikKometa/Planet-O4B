@@ -40,9 +40,9 @@
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item disabled>
+        <button mat-menu-item (click)="addMission(mission)">
           <mat-icon>create</mat-icon>
-          <span>W budowie</span>
+          <span>Edycja</span>
         </button>
         <button mat-menu-item disabled>
           <mat-icon>picture_as_pdf</mat-icon>

@@ -1,6 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, Inject, inject, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CurrencyMaskConfig } from 'ng2-currency-mask';
 import { first } from 'rxjs';
 import { CURRENCY_CONFIG } from 'src/app/modules/api/config/app-config';
@@ -12,17 +12,18 @@ import {
   MatDialogMissionFormControlsName,
   MatDialogMissionFormService
 } from '../mat-dialog-mission-form/mat-dialog-mission-form.service';
+import { DatePipe } from '@angular/common';
+import { LoginFormControlsName } from 'src/app/modules/login/form-service/login-form.service';
 
 @Component({
   selector: 'planet-add-missision-dialog',
   templateUrl: './add-missision-dialog.component.html',
   styleUrls: ['./add-missision-dialog.component.scss'],
-  providers: [MatDialogMissionFormService]
+  providers: [MatDialogMissionFormService,DatePipe]
 })
-export class AddMissisionDialogComponent implements OnInit{
+export class AddMissisionDialogComponent implements OnInit {
   public missionFormGroup!: FormGroup;
   public missionFormControlsName: typeof MatDialogMissionFormControlsName = MatDialogMissionFormControlsName;
-  public date: Date = new Date();
   public missionName: string = '';
   public changedViewDialog: boolean = false;
 
@@ -36,9 +37,16 @@ export class AddMissisionDialogComponent implements OnInit{
   private readonly prepareMissionForm: MatDialogMissionFormService = inject(MatDialogMissionFormService);
   private readonly navigationService: NavigationService = inject(NavigationService);
   private readonly manageMissionsService: ManageMissionsService = inject(ManageMissionsService);
+  private readonly datePipe = inject(DatePipe);
+  private readonly data = inject(MAT_DIALOG_DATA);
+
+  OnChanges(): void {}
 
   public ngOnInit(): void {
-    this.missionFormGroup = this.prepareMissionForm.createMissionForm();
+    if(this.data){
+      this.missionFormGroup = this.prepareMissionForm.createMissionForm(this.data);
+    }
+   
   }
 
   public close(): void {
@@ -47,12 +55,14 @@ export class AddMissisionDialogComponent implements OnInit{
 
   public saveForm(): void {
     this.missionName = this.missionFormGroup.get(this.missionFormControlsName.CODENAME)?.value;
+    console.log(this.missionFormGroup.controls);
+    
     if (this.missionFormGroup.valid) {
       this.manageMissionsService
         .postMission(this.createMissionRequest())
         .pipe(first())
         .subscribe({
-          next: () => (this.changedViewDialog = true),
+          next: () => (this.changedViewDialog = true)
         });
     }
   }
