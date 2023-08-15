@@ -14,9 +14,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { TranslateModule } from '@ngx-translate/core';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 
-import { TranslateModule } from '@ngx-translate/core';
 import { ShareModule } from '../share/share.module';
 import { AddMissisionDialogComponent } from './components/add-missision-dialog/add-missision-dialog.component';
 import { MissionsListComponent } from './components/missions-list/missions-list.component';

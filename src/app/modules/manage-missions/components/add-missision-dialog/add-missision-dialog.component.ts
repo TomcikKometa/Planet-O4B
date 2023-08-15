@@ -55,6 +55,11 @@ export class AddMissisionDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  public navigateToDashboard(): void {
+    this.navigationService.navigateToMainDashboard();
+    this.dialogRef.close();
+  }
+
   public saveForm(): void {
     this.missionName = this.missionFormGroup.get(this.missionFormControlsName.CODENAME)?.value;
 
@@ -75,10 +80,5 @@ export class AddMissisionDialogComponent implements OnInit {
       budget: this.missionFormGroup.get(this.missionFormControlsName.BUDGET)?.value,
       status: this.missionFormGroup.get(this.missionFormControlsName.STATUS)?.value
     };
-  }
-
-  public navigateToDashboard(): void {
-    this.navigationService.navigateToMainDashboard();
-    this.dialogRef.close();
   }
 }

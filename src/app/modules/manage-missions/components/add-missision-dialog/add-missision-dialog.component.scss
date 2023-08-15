@@ -11,24 +11,36 @@
   }
 }
 
-mat-form-field {
-  width: 100%;
-  margin-left: 0px;
-  padding: 0px;
-}
-
 .mat-dialog-heading {
   font-family: 'Open Sans';
   color: var(--unnamed-color-274daa);
   margin-bottom: 2rem;
 }
 
+::ng-deep .mat-form-budget {
+  width: 20% !important;
+  padding-left: 1rem;
+}
+
+.currency {
+  padding-top: 1.3rem;
+  text-align: center;
+  padding-left: 2.3rem;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-left: 0px;
+  padding: 0px;
+}
+
+
 ::ng-deep .mat-dialog-container {
   margin: 0px !important;
   padding: 0px !important;
 }
 
-.color {
+.dialog-footer {
   background-color: #dde8f9;
   margin-right: 0px;
   margin-left: 0px;
@@ -70,21 +82,7 @@ mat-form-field {
   color: var(--unnamed-color-ffffff) !important;
 }
 
-.currency {
-  padding-top: 1.3rem;
-  text-align: center;
-  padding-left: 2.3rem;
-}
 
-::ng-deep .mat-form-budget {
-  width: 20% !important;
-  padding-left: 1rem;
-}
-
-// ::ng-deep .mat-flat-button{
-//   height: 20px !important;
-//   width: 60px !important;
-// }
 
 ::ng-deep .mat-select-value {
   text-align: start !important;
@@ -101,28 +99,3 @@ mat-form-field {
 ::ng-deep .mat-form-field-wrapper {
   height: 4.5rem;
 }
-
-::ng-deep .buttonAfterAction {
-  height: 40px;
-  text-align: center;
-  font-weight: 800;
-  font-family: 'Open Sans';
-  border: 1px solid;
-  border-radius: 4px 4px 4px 4px !important;
-  font-size: 15px;
-
-  .afterCancel {
-    width: 300px;
-    background-color: var(--unnamed-color-ffffff) !important;
-    color: black !important;
-    border-color: var(--unnamed-color-274daa) !important;
-  }
-
-  .afterSave {
-    width: 100px;
-    background-color: var(--unnamed-color-274daa) !important;
-    color: yellow !important;
-    border-color: var(--unnamed-color-274daa) !important;
-  }
-}
-

@@ -8,7 +8,6 @@ export class AddressInterceptor implements HttpInterceptor {
   private static readonly CONFIG_FILE_SUFFIX: string = '.json';
 
   public intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    console.log(request.url);
     
     if (request.url.endsWith(AddressInterceptor.CONFIG_FILE_SUFFIX)) {
       return next.handle(request);

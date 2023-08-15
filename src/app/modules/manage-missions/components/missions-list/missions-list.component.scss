@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,300');
 
+.tabled-setting {
+  width: 100%;
+  border-radius: 10px;
+}
+
 .table-setting-middle {
   font-weight: 700;
   font-size: 15px;
@@ -42,11 +47,6 @@
   padding-left: 1rem;
   width: 2.5rem;
   border-bottom-color: #dde8f9;
-}
-
-::ng-deep .mat-table-th {
-  z-index: -1;
-  margin-top: 20px;
 }
 
 .table-row-setting-left {
