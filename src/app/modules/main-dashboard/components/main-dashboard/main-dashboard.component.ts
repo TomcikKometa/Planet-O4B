@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { RoutePath } from 'src/app/app-routing.module';
-import { ApiManageMissionUrl, ApiRouterAdresses } from 'src/app/modules/api/config/api-adress';
 import { ModuleCards } from 'src/app/modules/api/model/module-cards';
 import { UserDashboardCard } from 'src/app/modules/api/model/user-dashboard-card';
 import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
