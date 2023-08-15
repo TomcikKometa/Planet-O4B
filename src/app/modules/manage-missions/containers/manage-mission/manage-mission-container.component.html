@@ -33,7 +33,7 @@
         <div class="span-heading" style="font-size: 16px; color: #274daa">{{ 'manage_mission.header_text' | translate }}</div>
       </div>
       <div *ngIf="showMissions" class="d-flex justify-content-start mt-4 ml-5">
-        <button mat-flat-button (click)="addMission()">Dodaj misję</button>
+        <button mat-flat-button (click)="addMission()">{{ 'button.manage_mission.add_mission' | translate }}</button>
       </div>
       <div class="missionDataContainer" *ngIf="!showMissions">
         <div *ngIf="blankMissinData">
@@ -46,7 +46,7 @@
             <img class="imgTwo" src="../../../../assets/images/illustration.svg" />
           </div>
           <div class="d-flex justify-content-center mt-5">
-            <button mat-flat-button (click)="showMisisonData()">{{ 'button.manage_mission.load_mission' | translate }}</button>
+            <button mat-flat-button (click)="showMisisonData()"> {{ 'button.manage_mission.load_mission' | translate }} </button>
           </div>
         </div>
         <div *ngIf="isSpinner" class="spinner d-flex justify-content-center"><mat-spinner></mat-spinner></div>

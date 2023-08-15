@@ -9,7 +9,7 @@ import { CoreModule } from './modules/core/core.module';
 import { UiModule } from './modules/ui/ui.module';
 import { translateFactory } from './modules/utils/factory/factoryUtils';
 
-export const APPLICATION_INFORMATION_START: InjectionToken<string> = new InjectionToken('application title');
+export const APPLICATION_VERSION: InjectionToken<string> = new InjectionToken('application title');
 
 @NgModule({
   declarations: [
@@ -30,8 +30,8 @@ export const APPLICATION_INFORMATION_START: InjectionToken<string> = new Injecti
       multi: true,
     },
     {
-      provide: APPLICATION_INFORMATION_START,
-      useValue: 'Aktualna wersja systemu 1.8.62'
+      provide: APPLICATION_VERSION,
+      useValue: 'Aktualna wersja serwisu 1.8.62'
     },
     
   ],

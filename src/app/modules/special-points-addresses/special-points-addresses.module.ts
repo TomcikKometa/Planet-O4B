@@ -18,6 +18,7 @@ import { SpecialPointsAdressesMatDialogComponent } from './components/special-po
 import { SpecialPointsTableListComponent } from './components/special-points-table-list/special-points-table-list.component';
 import { SpecialPointsAddressesComponent } from './containers/special-points-addresses/special-points-addresses.component';
 import { SpecialPointsAddressesRoutingModule } from './special-points-addresses-routing.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const components: Type<unknown>[] = [
@@ -43,7 +44,8 @@ const containers: Type<unknown>[] = [SpecialPointsAddressesComponent];
     MatInputModule,
     UiModule,
     MatProgressBarModule,
-    MatSortModule
+    MatSortModule,
+    TranslateModule
   ],
   providers: [
     {

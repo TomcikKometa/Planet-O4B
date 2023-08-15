@@ -10,8 +10,8 @@
         <span class="ml-2">Gratulacje utworzono misję specjalną {{ specialAddressName }}.</span>
       </div>
       <div *ngIf="!changedViewDialog" class="settingFormPart col-10">
-        <h2 class="mat-dialog-heading">Dodaj adres specjalny</h2>
-        <span>Wprowadź dane.</span>
+        <h2 class="mat-dialog-heading">{{ 'special_points_addresses.header' | translate }}</h2>
+        <span>{{ 'special_points_addresses.form_add_point.header_text' | translate }}</span>
         <div class="mt-5" style="position: relative">
           <span class="fraction" [ngStyle]="{ left: progress + '%' }">{{ progress }}%</span>
         </div>
@@ -19,7 +19,7 @@
         <form [formGroup]="specialAddressesFormGroup" class="mt-4 tomek">
           <div class="row">
             <mat-form-field class="col-12">
-              <mat-label>Wybierz typ adresu</mat-label>
+              <mat-label> {{ 'special_points_addresses.form_add_point.type_adress' | translate }} </mat-label>
               <mat-select formControlName="{{ specialPointsControlsName.TYPE_ADDRESS }}" value="status.value">
                 <mat-option *ngFor="let address of addresses" value="{{ address.value }}">
                   {{ address.type }}
@@ -30,11 +30,11 @@
           </div>
           <div class="row">
             <mat-form-field class="col-6">
-              <mat-label>Planeta</mat-label>
+              <mat-label>{{ 'special_points_addresses.form_add_point.planet' | translate }}</mat-label>
               <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.PLANET }}" />
             </mat-form-field>
             <mat-form-field class="col-6">
-              <mat-label>Kod pocztowy</mat-label>
+              <mat-label>{{ 'special_points_addresses.form_add_point.postal_code' | translate }}</mat-label>
               <input
                 matInput
                 type="string"
@@ -45,17 +45,17 @@
           </div>
           <div class="row">
             <mat-form-field class="col-6">
-              <mat-label>Miejscowość</mat-label>
+              <mat-label>{{ 'special_points_addresses.form_add_point.city' | translate }}</mat-label>
               <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.CITY }}" />
             </mat-form-field>
             <mat-form-field class="col-6">
-              <mat-label>Ulica</mat-label>
+              <mat-label>{{ 'special_points_addresses.form_add_point.avenue' | translate }}</mat-label>
               <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.STREET }}" />
             </mat-form-field>
           </div>
           <div class="row">
             <mat-form-field class="col-6">
-              <mat-label>Numer budynku</mat-label>
+              <mat-label>{{ 'special_points_addresses.form_add_point.building_number' | translate }}</mat-label>
               <input
                 matInput
                 type="text"
@@ -64,7 +64,7 @@
               />
             </mat-form-field>
             <mat-form-field class="col-6">
-              <mat-label>Numer lokalu</mat-label>
+              <mat-label>{{ 'special_points_addresses.form_add_point.room' | translate }}</mat-label>
               <input matInput type="text" class="input" formControlName="{{ specialPointsControlsName.ROOM }}" />
             </mat-form-field>
           </div>
