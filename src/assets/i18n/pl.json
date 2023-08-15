@@ -7,7 +7,7 @@
   "main_dashboard": {
     "header": "Witaj!",
     "header_text_up": "Jesteś agentem do zadań specjalnych na zielonej planecie O4B.",
-    "header_text_down": "To jest twój system do zarządzania misjami specjalnymi realizowanymi przez Ciebie i twój zespół. Podążaj za białym kursorem",
+    "header_text_down": "To jest twój system do zarządzania misjami specjalnymi realizowanymi przez Ciebie i twój zespół. Podążaj za białym kursorem.",
     "mat_card": {
       "special_agents": "Twoi agenci do zadań specjalnych",
       "your_missions": "Twoje misje",

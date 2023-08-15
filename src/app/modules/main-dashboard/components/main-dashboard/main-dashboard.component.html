@@ -22,7 +22,7 @@
           <mat-card-title> {{ 'main_dashboard.mat_card.' + card.cardName | translate }} </mat-card-title>
         </mat-card-header>
         <mat-card-actions>
-          <button class="ml-4 mt-3" mat-button> {{ 'button.main_dashboard.' + card.buttonName | translate }} </button>
+          <button class="ml-4 mt-5" mat-button>{{ 'button.main_dashboard.' + card.buttonName | translate }}</button>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -54,7 +54,8 @@
         </div>
         <div class="actionsCardTwo">
           <a routerLink="/{{ card.router }}" routerLinkActive="active"
-            >{{ 'button.main_dashboard.go_forward' | translate }} <mat-icon class="ml-2 actionsCardTwoarrow">arrow_forward</mat-icon></a
+            >{{ 'button.main_dashboard.go_forward' | translate }}
+            <mat-icon class="ml-2 actionsCardTwoarrow">arrow_forward</mat-icon></a
           >
         </div>
       </div>

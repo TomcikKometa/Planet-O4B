@@ -30,7 +30,9 @@
 .dashboard-card {
   width: 400px;
   color: var(--unnamed-color-ffffff);
+  padding-top: 60px;
 }
+
 .first {
   background-image: linear-gradient(to right, var(--unnamed-color-7da6ed), var(--unnamed-color-dde8f9));
 }
@@ -50,15 +52,6 @@
     font-weight: 700;
   }
 }
-
-.settingPage {
-  background-image: url('/assets/images/layered-waves-haikei.svg');
-  background-size: 100%;
-  padding: 0 11% 0 11%;
-  height: 100%;
-  width: 100%;
-}
-
 
 .moduleFirst {
   width: 600px;
@@ -132,8 +125,6 @@
   border: 4px solid;
   outline: white;
 }
-
-
 
 ::ng-deep .box {
   width: 85% !important;
