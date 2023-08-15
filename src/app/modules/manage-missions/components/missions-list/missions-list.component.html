@@ -1,28 +1,36 @@
 <table
   mat-table
   [dataSource]="missions"
-  style="width: 100%; border-radius: 10px"
+  class="tabled-setting"
   matSort
   matSortActive="codename"
   matSortDirection="desc"
 >
   <ng-container matColumnDef="codename">
-    <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-heading-setting-left">{{ 'manage_mission.missions_data_table.mission_codename' | translate }}</th>
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-heading-setting-left">
+      {{ 'manage_mission.missions_data_table.mission_codename' | translate }}
+    </th>
     <td class="table-row-setting-left" mat-cell *matCellDef="let mission">{{ mission.codename }}</td>
   </ng-container>
 
   <ng-container matColumnDef="missionsDate">
-    <th mat-header-cell  mat-sort-header *matHeaderCellDef class="table-setting-middle">{{ 'manage_mission.missions_data_table.mission_date' | translate }}</th>
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-setting-middle">
+      {{ 'manage_mission.missions_data_table.mission_date' | translate }}
+    </th>
     <td class="table-row-setting-middle" mat-cell *matCellDef="let mission">{{ mission.missionsDate }}</td>
   </ng-container>
 
   <ng-container matColumnDef="status">
-    <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-setting-middle">{{ 'manage_mission.missions_data_table.status' | translate }}</th>
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-setting-middle">
+      {{ 'manage_mission.missions_data_table.status' | translate }}
+    </th>
     <td class="table-row-setting-middle" mat-cell *matCellDef="let mission">{{ mission.status }}</td>
   </ng-container>
 
   <ng-container matColumnDef="budget">
-    <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-setting-middle">{{ 'manage_mission.missions_data_table.budget' | translate }}</th>
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-setting-middle">
+      {{ 'manage_mission.missions_data_table.budget' | translate }}
+    </th>
     <td class="table-row-setting-middle" mat-cell *matCellDef="let mission">{{ mission.budget }}</td>
   </ng-container>
 
@@ -34,7 +42,9 @@
   </ng-container>
 
   <ng-container matColumnDef="Więcej">
-    <th mat-header-cell *matHeaderCellDef class="table-setting-right">{{ 'manage_mission.missions_data_table.more' | translate }}</th>
+    <th mat-header-cell *matHeaderCellDef class="table-setting-right">
+      {{ 'manage_mission.missions_data_table.more' | translate }}
+    </th>
     <td class="table-row-setting-middle" mat-cell *matCellDef="let mission">
       <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>

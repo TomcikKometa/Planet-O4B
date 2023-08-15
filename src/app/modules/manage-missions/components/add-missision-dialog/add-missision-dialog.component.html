@@ -2,16 +2,16 @@
   <div *ngIf="!changedViewDialog">
     <h2 class="mat-dialog-heading">{{ 'manage_mission.form_add_mission.header' | translate }}</h2>
     <span>{{ 'manage_mission.form_add_mission.header_text' | translate }}</span>
-    <form [formGroup]="missionFormGroup" class="mt-4 tomek">
+    <form [formGroup]="missionFormGroup" class="mt-4">
       <div class="row">
         <div class="col-6">
-          <mat-form-field class="">
+          <mat-form-field>
             <mat-label>{{ 'manage_mission.form_add_mission.codename' | translate }}</mat-label>
             <input matInput type="text" class="input" formControlName="{{ missionFormControlsName.CODENAME }}" />
           </mat-form-field>
         </div>
         <div class="col-6">
-          <mat-form-field class="">
+          <mat-form-field>
             <mat-label>{{ 'manage_mission.form_add_mission.mission_date' | translate }}</mat-label>
             <input
               matInput
@@ -35,7 +35,7 @@
             />
           </mat-form-field>
         </div>
-        <div class="col-1 currency"><span>zł</span></div>
+        <div class="currency col-1"><span>zł</span></div>
         <div class="col-6">
           <mat-form-field>
             <mat-label>{{ 'manage_mission.form_add_mission.status' | translate }}</mat-label>
@@ -48,7 +48,7 @@
     </form>
   </div>
 </div>
-<div *ngIf="!changedViewDialog" class="color d-flex justify-content-end">
+<div *ngIf="!changedViewDialog" class="dialog-footer d-flex justify-content-end">
   <button class="m-3 button buttonCancel" (click)="close()">Anuluj</button>
   <button class="m-3 button buttonSave" (click)="saveForm()">Zapisz</button>
 </div>

@@ -14,7 +14,14 @@ import { AddMissisionDialogComponent } from '../add-missision-dialog/add-missisi
 export class MissionsListComponent implements AfterViewInit {
   @Input() public missions: MissionTableData[] = [];
 
-  private static readonly _DISPLAYCOLUMNS: string[] = ['codename', 'missionsDate', 'status', 'budget', 'details', 'Więcej',];
+  private static readonly _DISPLAYCOLUMNS: string[] = [
+    'codename',
+    'missionsDate',
+    'status',
+    'budget',
+    'details',
+    'Więcej'
+  ];
 
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<MissionTableData>;
@@ -24,6 +31,15 @@ export class MissionsListComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.sort.sortChange.subscribe((sort: Sort) => {
       this.sortData(sort);
+    });
+  }
+
+  public addMission(mission: any): void {
+    this.dialog.open(AddMissisionDialogComponent, {
+      data: mission,
+      width: '50vw',
+      position: { top: '5vw', left: '25vw' },
+      autoFocus: false
     });
   }
 
@@ -62,15 +78,14 @@ export class MissionsListComponent implements AfterViewInit {
     return a.localeCompare(b, 'pl-PL') * (isAsc ? 1 : -1);
   }
 
-  private compareDate (a:string, b:string, isAsc:boolean): number{
-
+  private compareDate(a: string, b: string, isAsc: boolean): number {
     const parametersStart = a.split('.');
     const dayStart = parametersStart[0];
     const monthStart = parametersStart[1];
     const yearStart = parametersStart[2];
     const aDate = new Date(+yearStart, +monthStart - 1, +dayStart);
-   
-    const parametersEnd= b.split('.');
+
+    const parametersEnd = b.split('.');
     const dayEnd = parametersEnd[0];
     const monthEnd = parametersEnd[1];
     const yearEnd = parametersEnd[2];
@@ -81,15 +96,5 @@ export class MissionsListComponent implements AfterViewInit {
     } else {
       return aDate > bDate ? -1 : 1;
     }
-  }
-
-  public addMission(x: any): void {
-    
-    this.dialog.open(AddMissisionDialogComponent, {
-      data:x,
-      width: '50vw',
-      position: { top: '5vw', left: '25vw' },
-      autoFocus: false
-    });
   }
 }
