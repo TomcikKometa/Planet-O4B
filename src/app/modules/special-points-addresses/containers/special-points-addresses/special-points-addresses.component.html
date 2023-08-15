@@ -19,8 +19,16 @@
       <div class="d-flex justify-content-start mt-4 ml-5">
         <button mat-flat-button (click)="addMissionAddress()">Dodaj adres</button>
       </div>
-      <div class="missionDataContainerTwo mt-2">
-        <planet-special-points-table-list [addresses]="addresses"></planet-special-points-table-list>
+      <div  *ngIf="specialPointsResponse" class="missionDataContainerTwo mt-2">
+        <planet-special-points-table-list
+          [specialPointsResponse]="specialPointsResponse"
+        ></planet-special-points-table-list>
+        <planet-paginator
+          class="mt-2"
+          (paginationChange)="handlePaginationChange($event)"
+          [numberOfPages]="specialPointsResponse.numberOfPages"
+          [currentPage]="specialPointsResponse.currentPage"
+        ></planet-paginator>
       </div>
     </section>
   </div>

@@ -1,5 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { AdressesSpecialPointsRequest } from 'src/app/modules/api/model/adresses-special-points-request';
+import { SpecialPointsTableDataResponse } from 'src/app/modules/api/model/special-point/special-points-table-data-response';
 
 @Component({
   selector: 'planet-special-points-table-list',
@@ -7,7 +8,7 @@ import { AdressesSpecialPointsRequest } from 'src/app/modules/api/model/adresses
   styleUrls: ['./special-points-table-list.component.scss']
 })
 export class SpecialPointsTableListComponent {
-@Input() public addresses: AdressesSpecialPointsRequest[] = [];
+@Input() public specialPointsResponse!: SpecialPointsTableDataResponse;
 
 private static readonly _DISPLAYCOLUMNS: string[] = ['addressType', 'addressPeronalName', 'address', 'more',];
 
