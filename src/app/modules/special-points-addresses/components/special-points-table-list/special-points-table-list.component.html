@@ -7,22 +7,22 @@
   matSortDirection="desc"
 >
   <ng-container matColumnDef="addressType">
-    <div mat-header-cell mat-sort-header *matHeaderCellDef class="table-heading-setting-left">Rodzaj adresu</div>
+    <div mat-header-cell mat-sort-header *matHeaderCellDef class="table-heading-setting-left">{{ 'special_points_addresses.special_points_data_table.address_type' | translate }}</div>
     <div class="table-row-setting-left" mat-cell *matCellDef="let address">{{ address.codename }}</div>
   </ng-container>
 
   <ng-container matColumnDef="addressPeronalName">
-    <th mat-header-cell  mat-sort-header *matHeaderCellDef class="table-setting-middle">Twoja nazwa adresu</th>
+    <th mat-header-cell  mat-sort-header *matHeaderCellDef class="table-setting-middle">{{ 'special_points_addresses.special_points_data_table.personal_address_name' | translate }}</th>
     <td class="table-row-setting-middle" mat-cell *matCellDef="let address">{{ address.missionsDate }}</td>
   </ng-container>
 
   <ng-container matColumnDef="address">
-    <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-setting-status">Dane adresowe</th>
+    <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-setting-status">{{ 'special_points_addresses.special_points_data_table.addresses' | translate }}</th>
     <td class="table-row-setting-middle" mat-cell *matCellDef="let address">{{ address.status }}</td>
   </ng-container>
 
   <ng-container matColumnDef="more">
-    <th mat-header-cell *matHeaderCellDef class="table-setting-right">Więcej</th>
+    <th mat-header-cell *matHeaderCellDef class="table-setting-right">{{ 'special_points_addresses.special_points_data_table.more' | translate }}</th>
     <td class="table-row-setting-middle" mat-cell *matCellDef="let address">
       <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>
@@ -30,11 +30,11 @@
       <mat-menu #menu="matMenu">
         <button mat-menu-item disabled>
           <mat-icon>create</mat-icon>
-          <span>W budowie</span>
+          <span>{{ 'special_points_addresses.special_points_data_table.mat_menu_edition' | translate }}</span>
         </button>
         <button mat-menu-item disabled>
           <mat-icon>picture_as_pdf</mat-icon>
-          <span>W budowie</span>
+          <span>{{ 'special_points_addresses.special_points_data_table.mat_menu_pdf' | translate }}</span>
         </button>
       </mat-menu>
     </td>

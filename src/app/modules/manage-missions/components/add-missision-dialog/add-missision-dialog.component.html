@@ -1,18 +1,18 @@
 <div class="settingPage">
   <div *ngIf="!changedViewDialog">
-    <h2 class="mat-dialog-heading">Dodawanie misji</h2>
-    <span>Wprowadź dane.</span>
+    <h2 class="mat-dialog-heading">{{ 'manage_mission.form_add_mission.header' | translate }}</h2>
+    <span>{{ 'manage_mission.form_add_mission.header_text' | translate }}</span>
     <form [formGroup]="missionFormGroup" class="mt-4 tomek">
       <div class="row">
         <div class="col-6">
           <mat-form-field class="">
-            <mat-label>Kryptonim misji</mat-label>
+            <mat-label>{{ 'manage_mission.form_add_mission.codename' | translate }}</mat-label>
             <input matInput type="text" class="input" formControlName="{{ missionFormControlsName.CODENAME }}" />
           </mat-form-field>
         </div>
         <div class="col-6">
           <mat-form-field class="">
-            <mat-label>Termin misji</mat-label>
+            <mat-label>{{ 'manage_mission.form_add_mission.mission_date' | translate }}</mat-label>
             <input
               matInput
               type="date"
@@ -24,7 +24,7 @@
       <div class="row mt-2">
         <div class="mat-form-budget col-5">
           <mat-form-field>
-            <mat-label>Budżet misji</mat-label>
+            <mat-label>{{ 'manage_mission.form_add_mission.budget' | translate }}</mat-label>
             <input
               matInput
               type="text"
@@ -38,7 +38,7 @@
         <div class="col-1 currency"><span>zł</span></div>
         <div class="col-6">
           <mat-form-field>
-            <mat-label>Status misji</mat-label>
+            <mat-label>{{ 'manage_mission.form_add_mission.status' | translate }}</mat-label>
             <mat-select formControlName="{{ missionFormControlsName.STATUS }}">
               <mat-option *ngFor="let status of statuses" value="{{ status.value }}"> {{ status.type }} </mat-option>
             </mat-select>

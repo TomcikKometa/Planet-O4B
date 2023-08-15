@@ -21,7 +21,7 @@
   },
   "manage_mission": {
     "header": "Manage missions",
-    "header_text": "You can find here yours special missions",
+    "header_text": "You can find here Yours special missions",
     "card_heading":"Its empty here, but only for a while!",
     "side_navigation": {
       "all_missions": "All missions",
@@ -36,6 +36,36 @@
       "more":"More",
       "mat_menu_edition":"Edition",
       "mat_menu_pdf":"Under construction"
+    },
+    "form_add_mission":{
+      "header": "Adding mission",
+      "header_text":"Put data.",
+      "codename":"Codename mission",
+      "mission_date":"Mission date",
+      "budget":"Budget",
+      "status":"Status"
+    }
+  },
+  "special_points_addresses": {
+    "header": "Special points addresses",
+    "special_points_data_table": {
+      "address_type": "Address type",
+      "personal_address_name": "Personal address name",
+      "addresses":"Addresses",
+      "more":"More",
+      "mat_menu_edition": "Edition",
+      "mat_menu_pdf": "Under construction"
+    },
+    "form_add_point":{
+      "header": "Add special addresses",
+      "header_text":"Put data",
+      "type_adress":"Insert type address",
+      "planet":"Planet",
+      "city":"City",
+      "postal_code":"Postal code",
+      "building_number":"Building number",
+      "room":"Room",
+      "avenue":"Street"
     }
   },
   "button": {
@@ -49,6 +79,9 @@
       "see_more": "See details",
       "add_mission":"Add mission",
       "load_mission":"Load mission"
+    },
+    "special_points_addresses":{
+      "add_address":"Add address"
     }
   }
 }

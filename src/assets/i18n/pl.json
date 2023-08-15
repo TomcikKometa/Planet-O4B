@@ -1,4 +1,6 @@
 {
+
+  "application_version":"Aktualna wersja serwisu 1.8.62",
   "login": {
     "logged_in": "Zalogowany jako:"
   },
@@ -21,21 +23,51 @@
   },
   "manage_mission": {
     "header": "Zarządzanie misjami",
-    "header_text": "Znajdziesz tutaj swoje misje specjalne",
-    "card_heading":"Tu jest pusto ale tylko chwilowo!",
-    "side_navigation":{
+    "header_text": "Znajdziesz tutaj Swoje misje specjalne.",
+    "card_heading": "Tu jest pusto ale tylko chwilowo!",
+    "side_navigation": {
       "all_missions": "Wszystkie misje",
-      "secret_missions":"Tajne misje",
+      "secret_missions": "Tajne misje",
       "special_missions": "Specjalne misje"
     },
-    "missions_data_table":{
-      "mission_codename":"Kryptonim misji",
+    "missions_data_table": {
+      "mission_codename": "Kryptonim misji",
+      "mission_date": "Termin misji",
+      "status": "Status",
+      "budget": "Budżet",
+      "more": "Więcej",
+      "mat_menu_edition": "Edycja",
+      "mat_menu_pdf": "W budowie"
+    },
+    "form_add_mission":{
+      "header": "Dodawanie misji",
+      "header_text":"Wprowadź dane.",
+      "codename":"Kryptonim misji",
       "mission_date":"Termin misji",
-      "status":"Status",
       "budget":"Budżet",
+      "status":"Status"
+    }
+  },
+  "special_points_addresses": {
+    "header": "Adresy punktów specjalnych",
+    "special_points_data_table": {
+      "address_type": "Rodzaj adresu",
+      "personal_address_name": "Twoja nazwa adresu",
+      "addresses":"Dane adresowe",
       "more":"Więcej",
-      "mat_menu_edition":"Edycja",
-      "mat_menu_pdf":"W budowie"
+      "mat_menu_edition": "Edycja",
+      "mat_menu_pdf": "W budowie"
+    },
+    "form_add_point":{
+      "header": "Dodaj adres specjalny",
+      "header_text":"Wprowadź dane",
+      "planet":"Planeta",
+      "city":"Miejscowość",
+      "postal_code":"Kod pocztowy",
+      "building_number":"Numer budynku",
+      "room":"Numer lokalu",
+      "type_adress":"Wprowadź typ adresu",
+      "avenue":"Ulica"
     }
   },
   "button": {
@@ -47,8 +79,11 @@
     },
     "manage_mission": {
       "see_more": "Zobacz szczegóły",
-      "add_mission":"Dodaj misję",
-      "load_mission":"Załaduj misję"
+      "add_mission": "Dodaj misję",
+      "load_mission": "Załaduj misję"
+    },
+    "special_points_addresses":{
+      "add_address":"Dodaj adres"
     }
   }
 }

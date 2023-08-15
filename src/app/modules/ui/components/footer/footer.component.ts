@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { APPLICATION_INFORMATION_START } from 'src/app/app.module';
+import { APPLICATION_VERSION } from 'src/app/app.module';
 
 @Component({
   selector: 'planet-footer',
@@ -8,7 +8,7 @@ import { APPLICATION_INFORMATION_START } from 'src/app/app.module';
 })
 export class FooterComponent  {
 
-  private readonly appTitle: string = inject(APPLICATION_INFORMATION_START);
+  private readonly appTitle: string = inject(APPLICATION_VERSION);
   
   public get title(): string {
     return this.appTitle;
