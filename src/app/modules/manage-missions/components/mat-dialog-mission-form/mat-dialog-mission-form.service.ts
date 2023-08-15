@@ -6,21 +6,19 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   providedIn: 'root'
 })
 export class MatDialogMissionFormService {
-  private static readonly CODENAME_PATTERN: string = '^[0-9]{5}|[a-z]{5}-[0-3]{3}|[a-z]{2}-[0-9]{2}';
 
   private readonly formBuilder: FormBuilder = inject(FormBuilder);
 
   public createMissionForm(data?: any): FormGroup {
-    const parametersStart = data.missionsDate.split('.');
-    const dayStart = parametersStart[0];
-    const monthStart = parametersStart[1];
-    const yearStart = parametersStart[2];
-    const aDate = new Date(+yearStart, +monthStart - 1, +dayStart);
-
     if (data) {
+      const parametersStart = data.missionsDate.split('.');
+      const dayStart = parametersStart[0];
+      const monthStart = parametersStart[1];
+      const yearStart = parametersStart[2];
+      const aDate = new Date(+yearStart, +monthStart - 1, +dayStart);
       return this.formBuilder.group({
         [MatDialogMissionFormControlsName.CODENAME]: this.formBuilder.control(data.codename, {
-          validators: [Validators.required, Validators.pattern(MatDialogMissionFormService.CODENAME_PATTERN)]
+          validators: [Validators.required]
         }),
         [MatDialogMissionFormControlsName.MISSION_DATE]: this.formBuilder.control(
           formatDate(aDate, 'yyyy-MM-dd', 'en'),
@@ -35,21 +33,22 @@ export class MatDialogMissionFormService {
           validators: [Validators.required]
         })
       });
-    } else
+    } else {
       return this.formBuilder.group({
-        [MatDialogMissionFormControlsName.CODENAME]: this.formBuilder.control('0', {
-          validators: [Validators.required, Validators.pattern(MatDialogMissionFormService.CODENAME_PATTERN)]
-        }),
-        [MatDialogMissionFormControlsName.MISSION_DATE]: this.formBuilder.control('0', {
+        [MatDialogMissionFormControlsName.CODENAME]: this.formBuilder.control('', {
           validators: [Validators.required]
         }),
-        [MatDialogMissionFormControlsName.BUDGET]: this.formBuilder.control('0', {
+        [MatDialogMissionFormControlsName.MISSION_DATE]: this.formBuilder.control('', {
+          validators: [Validators.required]
+        }),
+        [MatDialogMissionFormControlsName.BUDGET]: this.formBuilder.control('', {
           validators: [Validators.required]
         }),
         [MatDialogMissionFormControlsName.STATUS]: this.formBuilder.control('', {
           validators: [Validators.required]
         })
       });
+    }
   }
 }
 
