@@ -3,19 +3,20 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { ApiSpecialPointsUrl } from '../../config/api-adress';
-import { MissionTableData } from '../../model/mission-table-data';
+import { PageRequestOptions } from '../../model/page/page-request-options';
+import { SpecialPointsTableDataResponse } from '../../model/special-point/special-points-table-data-response';
 import { SpecialPointsRequest } from '../../model/special-point-request';
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class SpecialPointsService {
-
   private readonly http: HttpClient = inject(HttpClient);
-  
-  public getAddressesData(): Observable<MissionTableData[]> {
-    return this.http.get<MissionTableData[]>(ApiSpecialPointsUrl.ADDRESSES_SPECIAL_POINTS);
+
+  public getAddressesData(requestOptions: PageRequestOptions): Observable<SpecialPointsTableDataResponse> {
+    return this.http.get<SpecialPointsTableDataResponse>(ApiSpecialPointsUrl.ADDRESSES_SPECIAL_POINTS, {
+      params: { ...requestOptions }
+    });
   }
 
   public postSpecialPointAddress(request: SpecialPointsRequest): Observable<void> {

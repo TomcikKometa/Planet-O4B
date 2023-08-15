@@ -7,3 +7,4 @@ export interface SpecialPointsRequest {
     postal_code:string;
     room?: string;
 }
+
