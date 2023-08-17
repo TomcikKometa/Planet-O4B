@@ -16,4 +16,11 @@
 
 .material-form{
     width: 40px !important;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  ::ng-deep .mat-form-field-wrapper{
+    background-color: var(--unnamed-color-ffffff);
+    align-items: center;
   }
