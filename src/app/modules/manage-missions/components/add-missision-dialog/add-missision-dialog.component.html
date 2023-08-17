@@ -1,6 +1,7 @@
 <div class="settingPage">
   <div *ngIf="!changedViewDialog">
-    <h2 class="mat-dialog-heading">{{ 'manage_mission.form_add_mission.header' | translate }}</h2>
+    <h2 *ngIf="!isEdit" class="mat-dialog-heading">{{ 'manage_mission.form_add_mission.header' | translate }}</h2>
+    <h2 *ngIf="isEdit"class="mat-dialog-heading">{{ 'manage_mission.form_add_mission.header_edit' | translate }}</h2>
     <span>{{ 'manage_mission.form_add_mission.header_text' | translate }}</span>
     <form [formGroup]="missionFormGroup" class="mt-4">
       <div class="row">

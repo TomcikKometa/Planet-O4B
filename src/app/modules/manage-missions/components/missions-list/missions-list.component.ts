@@ -34,9 +34,12 @@ export class MissionsListComponent implements AfterViewInit {
     });
   }
 
-  public addMission(mission: any): void {
+  public editMission(mission: MissionTableData): void {
     this.dialog.open(AddMissisionDialogComponent, {
-      data: mission,
+      data: {
+        mission:mission,
+        isEdit: true
+      },
       width: '50vw',
       position: { top: '5vw', left: '25vw' },
       autoFocus: false
