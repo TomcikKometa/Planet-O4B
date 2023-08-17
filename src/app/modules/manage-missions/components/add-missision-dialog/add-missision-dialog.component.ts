@@ -4,9 +4,9 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CurrencyMaskConfig } from 'ng2-currency-mask';
 import { first } from 'rxjs';
 import { CURRENCY_CONFIG } from 'src/app/modules/api/config/app-config';
-import { ManageMissionSelect } from 'src/app/modules/api/model/manage-mission-select';
-import { MissisonRequest } from 'src/app/modules/api/model/misison-request';
-import { MissionTableDataEdit } from 'src/app/modules/api/model/mission-table-data';
+import { ManageMissionSelect } from 'src/app/modules/api/model/manage-mission/manage-mission-select';
+import { MissisonRequest } from 'src/app/modules/api/model/manage-mission/misison-request';
+import { MissionTableDataEdit } from 'src/app/modules/api/model/manage-mission/mission-table-data';
 import { ManageMissionsService } from 'src/app/modules/api/services/manage-missions/manage-missions.service';
 import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
 

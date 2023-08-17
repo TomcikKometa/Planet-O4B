@@ -2,7 +2,7 @@ import { AfterViewInit, Component, inject, Input, ViewChild } from '@angular/cor
 import { MatDialog } from '@angular/material/dialog';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { MissionTableData } from 'src/app/modules/api/model/mission-table-data';
+import { MissionTableData } from 'src/app/modules/api/model/manage-mission/mission-table-data';
 
 import { AddMissisionDialogComponent } from '../add-missision-dialog/add-missision-dialog.component';
 

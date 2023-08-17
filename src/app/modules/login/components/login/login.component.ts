@@ -1,7 +1,7 @@
 import { Component, DoCheck, inject, OnInit, SimpleChange } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { first } from 'rxjs';
-import { LoginRequest } from 'src/app/modules/api/model/login-request';
+import { LoginRequest } from 'src/app/modules/api/model/login/login-request';
 import { LoginService } from 'src/app/modules/api/services/login/login.service';
 import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
 

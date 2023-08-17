@@ -3,8 +3,8 @@ import { inject, Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { StoreService } from 'src/app/modules/core/services/store/store.service';
 
-import { LoginRequest } from '../../model/login-request';
-import { LoginResponse } from '../../model/login-response';
+import { LoginRequest } from '../../model/login/login-request';
+import { LoginResponse } from '../../model/login/login-response';
 
 
 

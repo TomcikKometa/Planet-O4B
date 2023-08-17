@@ -2,7 +2,7 @@ import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { first, Subject, takeUntil } from 'rxjs';
-import { SpecialPointsRequest } from 'src/app/modules/api/model/special-point-request';
+import { SpecialPointsRequest } from 'src/app/modules/api/model/special-point/special-point-request';
 import { SpecialPointsService } from 'src/app/modules/api/services/special-points-addresses/special-points.service';
 
 import {
