@@ -58,6 +58,7 @@
     },
     "form_add_point":{
       "header": "Add special addresses",
+      "header_edit":"Mission edit",
       "header_text":"Put data",
       "type_adress":"Insert type address",
       "planet":"Planet",

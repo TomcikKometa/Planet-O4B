@@ -41,6 +41,7 @@
     },
     "form_add_mission":{
       "header": "Dodawanie misji",
+      "header_edit":"Edycja misji",
       "header_text":"Wprowadź dane.",
       "codename":"Kryptonim misji",
       "mission_date":"Termin misji",
