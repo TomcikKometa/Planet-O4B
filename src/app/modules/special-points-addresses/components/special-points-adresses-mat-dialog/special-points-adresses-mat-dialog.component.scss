@@ -149,3 +149,7 @@
   font-size: 80%;
   color: var(--unnamed-color-7da6ed);
 }
+
+::ng-deep .mat-form-field {
+  background: var(--unnamed-color-ffffff);
+}
