@@ -3,8 +3,9 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { ApiManageMissionUrl } from '../../config/api-adress';
-import { MissisonRequest } from '../../model/misison-request';
-import { MissionTableData } from '../../model/mission-table-data';
+import { MissisonRequest } from '../../model/manage-mission/misison-request';
+import { MissionTableData } from '../../model/manage-mission/mission-table-data';
+
 
 @Injectable({
   providedIn: 'root'

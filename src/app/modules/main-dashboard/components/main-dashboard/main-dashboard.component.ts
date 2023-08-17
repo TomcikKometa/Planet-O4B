@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RoutePath } from 'src/app/app-routing.module';
-import { ModuleCards } from 'src/app/modules/api/model/module-cards';
-import { UserDashboardCard } from 'src/app/modules/api/model/user-dashboard-card';
+import { ModuleCards } from 'src/app/modules/api/model/main-dashboard/module-cards';
+import { UserDashboardCard } from 'src/app/modules/api/model/main-dashboard/user-dashboard-card';
 import { NavigationService } from 'src/app/modules/core/services/navigation/navigation.service';
 
 @Component({

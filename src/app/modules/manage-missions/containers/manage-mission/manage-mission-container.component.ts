@@ -1,8 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Sort } from '@angular/material/sort';
-import { MissionTableData } from 'src/app/modules/api/model/mission-table-data';
-import { MissionTableDataMapper } from 'src/app/modules/api/model/mission-table-data-mapper';
+import { MissionTableData } from 'src/app/modules/api/model/manage-mission/mission-table-data';
+import { MissionTableDataMapper } from 'src/app/modules/api/model/manage-mission/mission-table-data-mapper';
 import { ManageMissionsService } from 'src/app/modules/api/services/manage-missions/manage-missions.service';
 
 import { AddMissisionDialogComponent } from '../../components/add-missision-dialog/add-missision-dialog.component';

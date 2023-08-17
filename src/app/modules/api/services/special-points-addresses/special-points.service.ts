@@ -4,8 +4,9 @@ import { Observable } from 'rxjs';
 
 import { ApiSpecialPointsUrl } from '../../config/api-adress';
 import { PageRequestOptions } from '../../model/page/page-request-options';
+import { SpecialPointsRequest } from '../../model/special-point/special-point-request';
 import { SpecialPointsTableDataResponse } from '../../model/special-point/special-points-table-data-response';
-import { SpecialPointsRequest } from '../../model/special-point-request';
+
 
 @Injectable({
   providedIn: 'root'

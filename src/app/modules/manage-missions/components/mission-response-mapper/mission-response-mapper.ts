@@ -1,5 +1,5 @@
-import { MissionTableData } from 'src/app/modules/api/model/mission-table-data';
-import { MissionTableDataMapper } from 'src/app/modules/api/model/mission-table-data-mapper';
+import { MissionTableData } from 'src/app/modules/api/model/manage-mission/mission-table-data';
+import { MissionTableDataMapper } from 'src/app/modules/api/model/manage-mission/mission-table-data-mapper';
 
 export class MissionResponseMapper {
 
