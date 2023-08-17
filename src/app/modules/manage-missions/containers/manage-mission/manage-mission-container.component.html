@@ -2,7 +2,7 @@
   <div class="row settingPage setContainer">
     <section class="setNav">
       <planet-side-nav-button
-        [label]="'manage_mission.side_navigation.all_missions' | translate "
+        [label]="'manage_mission.side_navigation.all_missions' | translate"
         [image]="'../../../../assets/images/icon-resources.svg'"
         [active]="activeIndex === 0"
         [index]="0"
@@ -32,7 +32,7 @@
         <div class="heading-separator">|</div>
         <div class="heading-text">{{ 'manage_mission.header_text' | translate }}</div>
       </div>
-      <div *ngIf="showMissions" class="d-flex justify-content-start mt-4 ml-5 pl-5 mb-3">
+      <div *ngIf="showMissions" class="d-flex justify-content-start mt-4 ml-5">
         <button mat-flat-button (click)="addMission()">{{ 'button.manage_mission.add_mission' | translate }}</button>
       </div>
       <div class="missionDataContainer" *ngIf="!showMissions">
@@ -46,7 +46,9 @@
             <img class="img" src="../../../../assets/images/illustration.svg" />
           </div>
           <div class="d-flex justify-content-center mt-5">
-            <button mat-flat-button (click)="showMisisonData()"> {{ 'button.manage_mission.load_mission' | translate }} </button>
+            <button mat-flat-button (click)="showMisisonData()">
+              {{ 'button.manage_mission.load_mission' | translate }}
+            </button>
           </div>
         </div>
         <div *ngIf="isSpinner" class="spinner d-flex justify-content-center"><mat-spinner></mat-spinner></div>

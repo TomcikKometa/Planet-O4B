@@ -24,7 +24,7 @@
     <th mat-header-cell mat-sort-header *matHeaderCellDef class="table-setting-middle">
       {{ 'manage_mission.missions_data_table.status' | translate }}
     </th>
-    <td class="table-row-setting-middle" mat-cell *matCellDef="let mission">{{ mission.status }}</td>
+    <td class="table-row-setting-middle" mat-cell *matCellDef="let mission">{{ mission.statusDisplay}}</td>
   </ng-container>
 
   <ng-container matColumnDef="budget">

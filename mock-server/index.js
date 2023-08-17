@@ -30,37 +30,37 @@ app.get("/missions-data-table", (req, res) => {
     {
       codename: "Dynamo",
       missionsDate: "24.12.2023",
-      status: "-1",
+      status: "0",
       budget: "100",
     },
     {
       codename: "Foo",
       missionsDate: "01.01.2024",
-      status: "0",
+      status: "-1",
       budget: "50",
     },
     {
       codename: "Traveler 001",
       missionsDate: "13.03.2023",
-      status: "Zrealizowana",
+      status: "0",
       budget: "100",
     },
     {
       codename: "Wielki grill",
       missionsDate: "16.08.2025",
-      status: "Przyszłe",
+      status: "1",
       budget: "1000",
     },
     {
       codename: "Faraway",
       missionsDate: "04.06.2022",
-      status: "Zrealizowane",
+      status: "1",
       budget: "75",
     },
     {
       codename: "Singleton",
       missionsDate: "16.08.2021",
-      status: "Zrealizowane",
+      status: "-1",
       budget: "340",
     },
   ]);
