@@ -32,7 +32,7 @@
         <div class="heading-separator">|</div>
         <div class="heading-text">{{ 'manage_mission.header_text' | translate }}</div>
       </div>
-      <div *ngIf="showMissions" class="d-flex justify-content-start mt-4 ml-5">
+      <div *ngIf="showMissions" class="d-flex justify-content-start mt-4 ml-5 pl-5 mb-3">
         <button mat-flat-button (click)="addMission()">{{ 'button.manage_mission.add_mission' | translate }}</button>
       </div>
       <div class="missionDataContainer" *ngIf="!showMissions">
