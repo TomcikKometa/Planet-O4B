@@ -3,12 +3,12 @@ import { NgModule, Type } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -21,7 +21,11 @@ import { PaginatorPageNumberComponent } from './components/paginator/paginator-p
 import { UiRoutingModule } from './ui-routing.module';
 
 
-const exportedComponents: Type<unknown>[] = [FooterComponent, HeaderComponent, PaginatorComponent];
+const exportedComponents: Type<unknown>[] = [
+  FooterComponent,
+  HeaderComponent,
+  PaginatorComponent
+];
 const moduleComponents: Type<unknown>[] = [PaginatorPageNumberComponent, LogoutPopUpComponent, LanguagePopUpComponent];
 
 @NgModule({
@@ -34,12 +38,12 @@ const moduleComponents: Type<unknown>[] = [PaginatorPageNumberComponent, LogoutP
     FormsModule,
     MatIconModule,
     MatDialogModule,
-    TranslateModule,
     MatCheckboxModule,
     MatButtonModule,
     MatRadioModule,
     MatDividerModule,
     MatMenuModule,
+    TranslateModule
   ],
   exports: [...exportedComponents]
 })

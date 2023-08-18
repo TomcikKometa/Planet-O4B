@@ -83,6 +83,9 @@
   "paginator":{
     "mat_select_records":"Records per page"
   },
+  "page_not_found":{
+    "header": "Page not found"
+  },
   "button": {
     "main_dashboard": {
       "see_agents": "See agents",
@@ -103,6 +106,12 @@
     },
     "special_points_addresses": {
       "add_address": "Add address"
+    },
+    "page_not_found": {
+      "text_up":"Go to",
+      "text_down":"home page",
+      "home_page":"Home page",
+      "page_not_fount":"Page not found"
     }
   }
 }
