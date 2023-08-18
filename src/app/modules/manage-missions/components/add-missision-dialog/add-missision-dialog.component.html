@@ -50,25 +50,25 @@
   </div>
 </div>
 <div *ngIf="!changedViewDialog" class="dialog-footer d-flex justify-content-end">
-  <button class="m-3 button buttonCancel" (click)="close()">Anuluj</button>
-  <button class="m-3 button buttonSave" (click)="saveForm()">Zapisz</button>
+  <button class="m-3 button buttonCancel" (click)="close()">  {{ 'button.manage_mission.action.cancel' | translate }} </button>
+  <button class="m-3 button buttonSave" (click)="saveForm()">{{ 'button.manage_mission.action.save' | translate }}</button>
 </div>
 
 <div *ngIf="afterActionCreate && changedViewDialog" class="settingPage">
   <div class="settingPage afterActions">
     <img src="../../../../assets/images/ikon-ok.svg" />
-    <span class="ml-2">Gratulacje utworzono misję specjalną {{ missionName }}.</span>
+    <span class="ml-2"> {{ 'manage_mission.form_add_mission.text_after_created' | translate}} {{ missionName }}.</span>
   </div>
 </div>
 
 <div *ngIf="afterActionEdit && changedViewDialog" class="settingPage">
   <div class="settingPage afterActions">
     <img src="../../../../assets/images/ikon-ok.svg" />
-    <span class="ml-2">Zapisano edycję formularza misji {{ missionName }}.</span>
+    <span class="ml-2">{{ 'manage_mission.form_add_mission.text_after_edit' | translate}}</span>
   </div>
 </div>
 
 <div *ngIf="changedViewDialog" class="dialog-footer d-flex justify-content-end">
-  <button class="m-3 button buttonAfterCancel" (click)="navigateToDashboard()">Wróć na dashboard</button>
-  <button class="m-3 button buttonAterSave" (click)="close()">Wroć do listy</button>
+  <button class="m-3 button buttonAfterCancel" (click)="navigateToDashboard()">{{ 'button.manage_mission.action.back_dashboard' | translate }}</button>
+  <button class="m-3 button buttonAterSave" (click)="close()">{{ 'button.manage_mission.action.back_list' | translate }}</button>
 </div>
