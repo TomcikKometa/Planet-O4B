@@ -93,7 +93,7 @@
     "manage_mission": {
       "see_more": "See details",
       "add_mission": "Add missions",
-      "load_mission": "Load miission",
+      "load_mission": "Load mission",
       "action":{
         "cancel":"Cancel",
         "save":"Save",
