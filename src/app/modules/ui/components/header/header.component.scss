@@ -12,7 +12,7 @@
   cursor: pointer;
 }
 
-.imgFlagUK{
+.imgFlagUK {
   height: 40px;
   width: 40px;
   margin-left: 10px;
@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 
-.imgFlagPolish{
+.imgFlagPolish {
   height: 40px;
   width: 40px;
   border-radius: 70px;
@@ -28,6 +28,17 @@
   margin-left: 10px;
 }
 
-.menuRight{
-  gap:15px
+.menuRight {
+  gap: 15px;
+}
+
+::ng-deep .mat-icon {
+  transform: scale(2);
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  margin-top: 8px;
+  margin-left: 15px;
 }

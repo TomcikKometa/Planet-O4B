@@ -48,4 +48,20 @@ export class HeaderComponent {
       }
     });
   }
+
+  public navigateToMissions(): void{
+    this.navigationService.navigateToMissions();
+  }
+
+  public navigateToSpecialPointsAdresses(): void{
+    this.navigationService.navigateToSpecialPointsAdresses();
+  }
+
+  public navigateToTeleportaion(): void {
+    this.navigationService.navigateToTeleportaion();
+  }
+
+  public navigateToExportImport(): void{
+    this.navigationService.navigateToExportImport();
+  }
 }

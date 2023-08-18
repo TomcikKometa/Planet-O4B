@@ -17,7 +17,19 @@ export class NavigationService {
     this.router.navigate([RoutePath.DASHBOARD]);
   }
 
-  public navigateToMissionsDashboard(): void {
+  public navigateToMissions(): void {
     this.router.navigate([RoutePath.MANAGE_MISSIONS]);
+  }
+
+  public navigateToSpecialPointsAdresses(): void {
+    this.router.navigate([RoutePath.SPECIAL_POINTS_ADRESSES]);
+  }
+
+  public navigateToTeleportaion(): void {
+    this.router.navigate([RoutePath.EXPORT_IMPORT]);
+  }
+
+  public navigateToExportImport(): void {
+    this.router.navigate([RoutePath.TELEPORTATION]);
   }
 }

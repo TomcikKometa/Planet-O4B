@@ -22,28 +22,28 @@
   "manage_mission": {
     "header": "Manage missions",
     "header_text": "You can find here Yours special missions",
-    "card_heading":"Its empty here, but only for a while!",
+    "card_heading": "Its empty here, but only for a while!",
     "side_navigation": {
       "all_missions": "All missions",
       "secret_missions": "Secret missions",
       "special_missions": "Special missions"
     },
-    "missions_data_table":{
-      "mission_codename":"Mission codename",
-      "mission_date":"Mission date",
-      "status":"Status",
-      "budget":"Budget",
-      "more":"More",
-      "mat_menu_edition":"Edition",
-      "mat_menu_pdf":"Under construction"
+    "missions_data_table": {
+      "mission_codename": "Mission codename",
+      "mission_date": "Mission date",
+      "status": "Status",
+      "budget": "Budget",
+      "more": "More",
+      "mat_menu_edition": "Edition",
+      "mat_menu_pdf": "Under construction"
     },
-    "form_add_mission":{
+    "form_add_mission": {
       "header": "Adding mission",
-      "header_text":"Put data.",
-      "codename":"Codename mission",
-      "mission_date":"Mission date",
-      "budget":"Budget",
-      "status":"Status"
+      "header_text": "Put data.",
+      "codename": "Codename mission",
+      "mission_date": "Mission date",
+      "budget": "Budget",
+      "status": "Status"
     }
   },
   "special_points_addresses": {
@@ -51,38 +51,46 @@
     "special_points_data_table": {
       "address_type": "Address type",
       "personal_address_name": "Personal address name",
-      "addresses":"Addresses",
-      "more":"More",
+      "addresses": "Addresses",
+      "more": "More",
       "mat_menu_edition": "Edition",
       "mat_menu_pdf": "Under construction"
     },
-    "form_add_point":{
+    "form_add_point": {
       "header": "Add special addresses",
-      "header_edit":"Mission edit",
-      "header_text":"Put data",
-      "type_adress":"Insert type address",
-      "planet":"Planet",
-      "city":"City",
-      "postal_code":"Postal code",
-      "building_number":"Building number",
-      "room":"Room",
-      "avenue":"Street"
+      "header_edit": "Mission edit",
+      "header_text": "Put data",
+      "type_adress": "Insert type address",
+      "planet": "Planet",
+      "city": "City",
+      "postal_code": "Postal code",
+      "building_number": "Building number",
+      "room": "Room",
+      "avenue": "Street"
     }
   },
-  "button": {
-    "main_dashboard": {
-      "see_agents": "See agents",
-      "check_missions": "Check missions",
-      "see_more": "See more",
-      "go_forward": "Go"
+  "header": {
+    "mat_menu": {
+      "manage_mission": "Manage mission",
+      "special_points_adresses": "Special points address",
+      "teleportation": "Teleportation",
+      "export_import": "Export/import"
     },
-    "manage_mission": {
-      "see_more": "See details",
-      "add_mission":"Add mission",
-      "load_mission":"Load mission"
-    },
-    "special_points_addresses":{
-      "add_address":"Add address"
+    "button": {
+      "main_dashboard": {
+        "see_agents": "See agents",
+        "check_missions": "Check missions",
+        "see_more": "See more",
+        "go_forward": "Go"
+      },
+      "manage_mission": {
+        "see_more": "See details",
+        "add_mission": "Add mission",
+        "load_mission": "Load mission"
+      },
+      "special_points_addresses": {
+        "add_address": "Add address"
+      }
     }
   }
 }

@@ -7,6 +7,7 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { TranslateModule } from '@ngx-translate/core';
@@ -38,6 +39,7 @@ const moduleComponents: Type<unknown>[] = [PaginatorPageNumberComponent, LogoutP
     MatButtonModule,
     MatRadioModule,
     MatDividerModule,
+    MatMenuModule,
   ],
   exports: [...exportedComponents]
 })

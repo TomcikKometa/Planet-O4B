@@ -30,6 +30,6 @@ export class MainDashboardComponent {
   private readonly navigationSarvice: NavigationService = inject(NavigationService);
 
   public navigateToMissionsDashboard(): void {
-    this.navigationSarvice.navigateToMissionsDashboard();
+    this.navigationSarvice.navigateToMissions();
   }
 }
