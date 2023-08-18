@@ -39,11 +39,14 @@
     },
     "form_add_mission": {
       "header": "Adding mission",
+      "header_edit":"Edit mission",
       "header_text": "Put data.",
       "codename": "Codename mission",
       "mission_date": "Mission date",
       "budget": "Budget",
-      "status": "Status"
+      "status": "Status",
+      "text_after_created":"Congratulations the special mission has been created.",
+      "text_after_edit":"Successfully mission has been edited."
     }
   },
   "special_points_addresses": {
@@ -75,22 +78,31 @@
       "special_points_adresses": "Special points address",
       "teleportation": "Teleportation",
       "export_import": "Export/import"
+    }
+  },
+  "paginator":{
+    "mat_select_records":"Records per page"
+  },
+  "button": {
+    "main_dashboard": {
+      "see_agents": "See agents",
+      "check_missions": "Check missions",
+      "see_more": "See more",
+      "go_forward": "Go"
     },
-    "button": {
-      "main_dashboard": {
-        "see_agents": "See agents",
-        "check_missions": "Check missions",
-        "see_more": "See more",
-        "go_forward": "Go"
-      },
-      "manage_mission": {
-        "see_more": "See details",
-        "add_mission": "Add mission",
-        "load_mission": "Load mission"
-      },
-      "special_points_addresses": {
-        "add_address": "Add address"
+    "manage_mission": {
+      "see_more": "See details",
+      "add_mission": "Add missions",
+      "load_mission": "Load miission",
+      "action":{
+        "cancel":"Cancel",
+        "save":"Save",
+        "back_dashboard":"Back to dashboard",
+        "back_list":"Back to list"
       }
+    },
+    "special_points_addresses": {
+      "add_address": "Add address"
     }
   }
 }

@@ -46,7 +46,9 @@
       "codename":"Kryptonim misji",
       "mission_date":"Termin misji",
       "budget":"Budżet",
-      "status":"Status"
+      "status":"Status",
+      "text_after_created":"Gratulacje utworzono misję specjalną",
+      "text_after_edit":"Pomyślnie edytowano misję"
     }
   },
   "special_points_addresses": {
@@ -61,6 +63,7 @@
     },
     "form_add_point":{
       "header": "Dodaj adres specjalny",
+      "header_edit":"Edycja misji",
       "header_text":"Wprowadź dane",
       "planet":"Planeta",
       "city":"Miejscowość",
@@ -79,6 +82,9 @@
     "export_import":"Export/import"
   }
 },
+"paginator":{
+  "mat_select_records":"Rekordy na stronę"
+},
   "button": {
     "main_dashboard": {
       "see_agents": "Zobacz agentów",
@@ -89,7 +95,13 @@
     "manage_mission": {
       "see_more": "Zobacz szczegóły",
       "add_mission": "Dodaj misję",
-      "load_mission": "Załaduj misję"
+      "load_mission": "Załaduj misję",
+      "action":{
+        "cancel":"Anuluj",
+        "save":"Zapisz",
+        "back_dashboard":"Wroć na dashboard",
+        "back_list":"Wroć do listy"
+      }
     },
     "special_points_addresses":{
       "add_address":"Dodaj adres"
