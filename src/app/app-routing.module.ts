@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LoginGuard } from './modules/core/guards/login/login.guard';
-import { PageNotFoundComponent } from './modules/ui/page-not-found/page-not-found.component';
 export enum RoutePath {
   LOGIN = '',
   DASHBOARD = 'dashboard',

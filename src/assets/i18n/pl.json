@@ -85,6 +85,9 @@
 "paginator":{
   "mat_select_records":"Rekordy na stronę"
 },
+"page_not_found": {
+  "header":"Nie znaleziono strony"
+},
   "button": {
     "main_dashboard": {
       "see_agents": "Zobacz agentów",
@@ -105,6 +108,12 @@
     },
     "special_points_addresses":{
       "add_address":"Dodaj adres"
+    },
+    "page_not_found": {
+      "text_up":"Przejdź na",
+      "text_down":"strone główną",
+      "home_page":"Strona główna",
+      "page_not_fount":"Nie znaleziono strony"
     }
   }
 }
