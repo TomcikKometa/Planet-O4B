@@ -27,6 +27,8 @@ export class AddMissisionDialogComponent implements OnInit {
   public missionName: string = '';
   public changedViewDialog: boolean = false;
   public isEdit: boolean = false;
+  public afterActionEdit: boolean = false;
+  public afterActionCreate: boolean = false;
 
   public statuses: ManageMissionSelect[] = [
     { type: 'Przyszła', value: '1' },
@@ -70,7 +72,14 @@ export class AddMissisionDialogComponent implements OnInit {
         .postMission(this.createMissionRequest())
         .pipe(first())
         .subscribe({
-          next: () => (this.changedViewDialog = true)
+          next: () => {
+            if (this.isEdit) {
+              (this.afterActionEdit = true), (this.afterActionCreate = false);
+            } else {
+              (this.afterActionEdit = false), (this.afterActionCreate = true);
+            }
+            this.changedViewDialog = true;
+          }
         });
     }
   }

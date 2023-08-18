@@ -54,13 +54,21 @@
   <button class="m-3 button buttonSave" (click)="saveForm()">Zapisz</button>
 </div>
 
-<div *ngIf="changedViewDialog" class="settingPage">
+<div *ngIf="afterActionCreate && changedViewDialog" class="settingPage">
   <div class="settingPage afterActions">
     <img src="../../../../assets/images/ikon-ok.svg" />
     <span class="ml-2">Gratulacje utworzono misję specjalną {{ missionName }}.</span>
   </div>
 </div>
-<div *ngIf="changedViewDialog" class="color d-flex justify-content-end">
+
+<div *ngIf="afterActionEdit && changedViewDialog" class="settingPage">
+  <div class="settingPage afterActions">
+    <img src="../../../../assets/images/ikon-ok.svg" />
+    <span class="ml-2">Zapisano edycję formularza misji {{ missionName }}.</span>
+  </div>
+</div>
+
+<div *ngIf="changedViewDialog" class="dialog-footer d-flex justify-content-end">
   <button class="m-3 button buttonAfterCancel" (click)="navigateToDashboard()">Wróć na dashboard</button>
   <button class="m-3 button buttonAterSave" (click)="close()">Wroć do listy</button>
 </div>
