@@ -9,6 +9,25 @@
         <img *ngIf="isEnglishFlag | async" class="imgFlagUK" src="../../../../assets/images/englishFlag.jpg" (click)="changeLanguagePopUp()" />
         <img  *ngIf="isPolishFlag | async" class="imgFlagPolish" src="../../../../assets/images/polishFlag.jpg" (click)="changeLanguagePopUp()" />
       </div>
+      <div class="icon"><mat-icon [matMenuTriggerFor]="menu">menu</mat-icon></div>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="navigateToMissions()">
+          <mat-icon>airplanemode_active</mat-icon>
+          <span>{{ 'header.mat_menu.manage_mission' | translate }}</span>
+        </button>
+        <button mat-menu-item (click)="navigateToSpecialPointsAdresses()">
+          <mat-icon>home</mat-icon>
+          <span>{{ 'header.mat_menu.special_points_adresses' | translate }}</span>
+        </button>
+        <button mat-menu-item (click)="navigateToTeleportaion()">
+          <mat-icon>graphic_eq</mat-icon>
+          <span>{{ 'header.mat_menu.teleportation' | translate }}</span>
+        </button>
+        <button mat-menu-item (click)="navigateToExportImport()">
+          <mat-icon>import_export</mat-icon>
+          <span>{{ 'header.mat_menu.export_import' | translate }}</span>
+        </button>
+      </mat-menu>
     </div>
   </div>
 </div>

@@ -71,6 +71,14 @@
       "avenue":"Ulica"
     }
   },
+"header":{
+  "mat_menu":{
+    "manage_mission":"Zarządzanie misjami",
+    "special_points_adresses":"Adresy punktów specjalnych",
+    "teleportation":"Teleportacja",
+    "export_import":"Export/import"
+  }
+},
   "button": {
     "main_dashboard": {
       "see_agents": "Zobacz agentów",

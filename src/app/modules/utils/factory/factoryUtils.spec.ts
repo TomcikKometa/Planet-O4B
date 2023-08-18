@@ -1,7 +1,7 @@
 import { TranslateService } from '@ngx-translate/core';
 import { of } from 'rxjs';
-import { APP_DEFAULT_LANG, APP_USER_LANG } from 'src/app/config/app-config';
 
+import { APP_DEFAULT_LANG, APP_USER_LANG } from '../../api/config/app-config';
 import { translateFactory } from './factoryUtils';
 
 describe('cretate translateFactory', () => {
